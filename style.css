@@ -1,0 +1,180 @@
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+:root{
+    --a:#ffffff;
+}
+footer{
+    background-color: black;
+    width: 100%;
+    min-height: 50vh;
+    margin-top:20vh;
+}
+header{
+    min-height: 10vh;
+    min-width: 700px;
+    position: fixed;
+    background-color:black;
+    width:100%;
+    height:10vh;
+    z-index: 2;
+}
+header p{
+
+    display: inline-block;
+    width:10vh;
+    height: 10vh;
+    color:white;
+    font-size: 5vh;
+    padding-left: 2.5%;
+    padding-top: 2vh;
+}
+header nav{
+    height:10vh;
+    width:60%;
+}
+header nav a{
+    position: relative;
+    display: inline-block;
+    width:20%;
+    height:100%;
+    padding:10px;
+    height:auto;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    font-size: 3vh;
+}
+header nav a:hover{
+    background-color: white;
+    color:gray;
+}
+a{
+    color:white;
+}
+
+body{
+    min-width:700px;
+    min-height: 500px;
+    width:100%;
+    height:100%;
+    background:repeating-linear-gradient(
+        skyblue 0%,  
+        skyblue 5%,
+        yellow 5%,
+        yellow 10%
+    )
+}
+main{
+    width:80%;
+    height:450vh;
+    /*position: absolute;*/
+    margin-left:10%;
+    background-color:white;
+    border-left: 3px solid gray;
+    border-right: 3px solid gray;
+    border-bottom: 3px solid gray;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    overflow: hidden;
+}
+section{
+    width:100%;
+    height:100vh;
+}
+.space{
+    width:100%;
+    height:10vh;
+}
+#jianjie-div{
+    background:repeating-linear-gradient(
+        rgb(86,86,86),white);}
+#zhanghao-div{
+    background:repeating-linear-gradient(
+        white,lightgreen);}
+#rizhi-div{
+    background:repeating-linear-gradient(
+        lightgreen,orange);}
+h2{
+    width:100%;
+    height:10vh;
+    text-align: center;
+    font-size: 30px;
+    padding-top:10px;
+    font-family:'Gill Sans', 'Gill Sans MT', sans-serif;
+}
+.bk-one-content{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10vh;
+    height:60vh;
+    padding:10vh;
+    background-color: skyblue;
+    border-radius: 50px;
+}
+.bk-one-content b{
+    float: right;
+}
+#zhanghao{
+    width:100%;
+    height:100vh;
+    background-color: lightgreen;
+}
+#rizhi{
+    width:100%;
+    height:110vh;
+    background-color: orange;
+}
+.rizhi-content-border{
+    width:90%;
+    margin-top: 10vh;
+    margin-left: 5%;
+    height:60vh;
+    border:3px rgb(86,86,86) dashed;
+    border-radius: 25px;
+    overflow: hidden;
+}
+.rizhi-content{
+    width:90%;
+    margin-left:5%;
+    padding-top: 10px;
+    padding-bottom:10px ;
+}
+/*打字动画*/
+#welcome-section{
+    width:100%;min-height: 100vh;
+    background-color: rgb(86, 86, 86);
+    display: flex;justify-content: center;
+    align-items: center;
+    font-family: monospace;}
+h1[class=welcome_h1]{
+    font-size: 80px;
+    color:white;
+    position: relative;
+    animation: color_h1 5s 11s infinite;}
+h1[class=welcome_h1]::after, h1::before{
+    content: '';
+    position:absolute;inset:0;}
+@keyframes type {to{left:100%;}}
+@keyframes repeat_link {
+    from,to{background-color:black;}
+    50%{background-color: white;}}
+@keyframes color_h1{
+    from,to{box-shadow: none;color:white;}
+    25%{box-shadow: -5px -5px white;}
+    75%{box-shadow: 5px 5px black;}}
+@keyframes yingcang{
+    from{opacity: 1;}
+    to{background-color: rgb(86,86,86);opacity: 0;}}
+h1::before{
+    background-color:rgb(86, 86, 86);
+    animation: type 5s 500ms steps(7) forwards;}
+h1::after{width:3px;
+    animation: type 5s  500ms steps(7) forwards,
+    repeat_link 500ms forwards,
+    yingcang 3s 10.5s forwards;
+    background-color:black;}
