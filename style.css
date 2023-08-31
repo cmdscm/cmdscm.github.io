@@ -1,18 +1,39 @@
+/* 初始 */
 *{
     margin:0;
     padding:0;
     text-decoration: none;
     box-sizing: border-box;
 }
+/* 变量 */
 :root{
     --a:#ffffff;
 }
+/* 页尾 */
 footer{
     background-color: black;
     width: 100%;
     min-height: 50vh;
     margin-top:20vh;
 }
+/* 页尾提醒词 */
+footer p{
+    font-size: 10vh;
+    color:white;
+    width:100%;
+    height:auto;
+    padding-top:5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+/* 页尾分割线 */
+footer hr{
+    width:90%;
+    margin-left:5%;
+    height: 1vh;
+    color:white;
+}
+/* 页头 */
 header{
     min-height: 10vh;
     min-width: 700px;
@@ -22,6 +43,12 @@ header{
     height:10vh;
     z-index: 2;
 }
+/* 页头导航栏 */
+header nav{
+    height:10vh;
+    width:60%;
+}
+/* 页头logo */
 header p{
 
     display: inline-block;
@@ -32,10 +59,7 @@ header p{
     padding-left: 2.5%;
     padding-top: 2vh;
 }
-header nav{
-    height:10vh;
-    width:60%;
-}
+/* 页头导航栏链接 */
 header nav a{
     position: relative;
     display: inline-block;
@@ -56,7 +80,7 @@ header nav a:hover{
 a{
     color:white;
 }
-
+/* 页面背景 */
 body{
     min-width:700px;
     min-height: 500px;
@@ -69,6 +93,7 @@ body{
         yellow 10%
     )
 }
+/* 页面主体 */
 main{
     width:80%;
     height:450vh;
@@ -82,23 +107,29 @@ main{
     border-bottom-right-radius: 50px;
     overflow: hidden;
 }
+/* 板块 */
 section{
     width:100%;
     height:100vh;
 }
+/* 板块过渡 */
 .space{
     width:100%;
     height:10vh;
 }
+/* 个人简介板块过渡 */
 #jianjie-div{
-    background:repeating-linear-gradient(
+    background:linear-gradient(
         rgb(86,86,86),white);}
+/* 我的账号板块过渡 */
 #zhanghao-div{
-    background:repeating-linear-gradient(
+    background:linear-gradient(
         white,lightgreen);}
+/* 一篇日志板块过渡 */
 #rizhi-div{
-    background:repeating-linear-gradient(
+    background:linear-gradient(
         lightgreen,orange);}
+/*板块标题*/
 h2{
     width:100%;
     height:10vh;
@@ -107,6 +138,7 @@ h2{
     padding-top:10px;
     font-family:'Gill Sans', 'Gill Sans MT', sans-serif;
 }
+/* 个人简介内容 */
 .bk-one-content{
     width: 90%;
     margin-left: 5%;
@@ -119,16 +151,74 @@ h2{
 .bk-one-content b{
     float: right;
 }
+/* 我的账号背景 */
 #zhanghao{
     width:100%;
-    height:100vh;
+    height:auto;
+    padding-bottom: 10vh;
     background-color: lightgreen;
 }
+/* 我的账号内容 */
+.zhanghao-content-border{
+    width:90%;
+    margin-left:5%;
+    height:auto;
+}
+.zhanghao-content{
+    width:100%;
+    height:auto;
+    padding:5vh;
+    margin-top:5vh;
+    margin-bottom: 5vh;
+    border-radius: 5vh;
+    border:3px dashed green
+}
+/* 我的账号内容的设置 */
+.zhanghao-content img ,.zhanghao-content a,.zhanghao-content h3{
+    display: inline-block;
+}
+.zhanghao-content img{
+    width:15vh;
+    height:15vh;
+    border-radius: 50%;
+    overflow: hidden;
+    border:3px solid white;
+}
+.zhanghao-content a{
+    float: right;
+    width: 15vh;
+    height: 8vh;
+    font-size: 5vh;
+    background-color: green;
+    border-radius: 2vh;
+    text-align: center;
+}
+.zhanghao-content h3{
+    text-align: center;
+    font-size: 30px;
+    width:60%;
+    height: 10vh;
+    margin-left: 5%;
+    color: black;
+}
+.zhanghao-content img:hover{
+    transform: scale(1.2) ;
+    border:3px solid black;
+    cursor:not-allowed ;
+}
+.zhanghao-content a:hover{
+    background-color: rgb(1, 76, 1);
+}
+.zhanghao-content h3:hover{
+    color:green;
+}
+/* 一篇日志背景 */
 #rizhi{
     width:100%;
-    height:110vh;
+    height:111vh;
     background-color: orange;
 }
+/* 一篇日志内容 */
 .rizhi-content-border{
     width:90%;
     margin-top: 10vh;
@@ -143,10 +233,14 @@ h2{
     margin-left:5%;
     padding-top: 10px;
     padding-bottom:10px ;
+    text-align: center;
 }
-/*打字动画*/
+
+/* 打字动画 */
+
+/* 定义元素 */
 #welcome-section{
-    width:100%;min-height: 100vh;
+    width:100%;min-height: 100vh;padding-top: 10vh;
     background-color: rgb(86, 86, 86);
     display: flex;justify-content: center;
     align-items: center;
@@ -159,17 +253,21 @@ h1[class=welcome_h1]{
 h1[class=welcome_h1]::after, h1::before{
     content: '';
     position:absolute;inset:0;}
+/* 定义动画 */
 @keyframes type {to{left:100%;}}
 @keyframes repeat_link {
     from,to{background-color:black;}
     50%{background-color: white;}}
 @keyframes color_h1{
     from,to{box-shadow: none;color:white;}
-    25%{box-shadow: -5px -5px white;}
-    75%{box-shadow: 5px 5px black;}}
+    25%{box-shadow: inset -5px -5px white;}
+    49%{box-shadow: inset 0 0 white;}
+    50%{box-shadow: inset 0 0 black;}
+    75%{box-shadow: inset 5px 5px black;}}
 @keyframes yingcang{
     from{opacity: 1;}
     to{background-color: rgb(86,86,86);opacity: 0;}}
+/* 使用动画 */
 h1::before{
     background-color:rgb(86, 86, 86);
     animation: type 5s 500ms steps(7) forwards;}
