@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- 设置 -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,42 +8,79 @@
     <link rel="stylesheet" href="style.css">
     <title>我的网站</title>
 </head>
+<!-- 网页内容 -->
 <body>
+    <!-- 导航栏 -->
     <header>
         <nav>
+            <!-- logo -->
             <p>G</p>
+            <!-- 链接 -->
             <a href="#jianjie-div">个人简介</a>
             <a href="#zhanghao-div">我的账号</a>
             <a href="#rizhi-div">一篇日志</a>
         </nav>
     </header>
     <main>
+        <!-- 铺垫导航栏 -->
         <div class="space"></div>
+        <!-- 欢迎板块 -->
         <section class="bankuai" id="welcome-section">
             <h1 class="welcome_h1">WELCOME</h1>
         </section>
+        <!-- 板块过渡 -->
         <div class="space" id="jianjie-div"></div>
+        <!-- 个人简介 -->
         <section class="bankuai" id="jianjie">
+            <!-- 标题 -->
             <h2 class="bk-title">个人简介</h2>
+            <!-- 正文 -->
             <p class="bk-one-content">男,小学六年级,
 喜欢玩我的世界,正在学python、scratch、HTML和JS,
 还是一名UP主。<b>——23/09/02</b>
 </p>
         </section>
+        <!-- 板块过渡 -->
         <div class="space" id="zhanghao-div"></div>
+        <!-- 我的账号 -->
         <section class="bankuai" id="zhanghao">
             <h2 class="bk-title">我的账号</h2>
+            <div class="zhanghao-content-border">
+                <div class="zhanghao-content" id="bili">
+                    <img src="b站头像.jpg" title="b站头像" alt="我的b站头像">
+                    <h3>B站</h3>
+                    <a class="zhanghao-content-a" id="bili-a" target="_blank" href="https://space.bilibili.com/1402300157">前往</a>
+                </div>
+                <div class="zhanghao-content" id="gongchuang">
+                    <img src="共创头像.jpg" title="共创头像" alt="我的共创头像">
+                    <h3>共创</h3>
+                    <a class="zhanghao-content-a" id="gongchuang-a" target="_blank" href="https://www.ccw.site/student/62df9aa87c888254d55b6f6a">前往</a>
+                </div>
+                <div class="zhanghao-content" id="freecodecamp">
+                    <img src="https://cmdscm.github.io/qqimg.jpg" title="我的freecodecamp头像" alt="我的freecodecamp头像">
+                    <h3>freeCodeCamp</h3>
+                    <a class='zhanghao-content-a' id="freecodecamp-a" target="_blank" href="https://www.freecodecamp.org/clever-sc-cat">前往</a>
+                </div>
+            </div>
         </section>
+        <!-- 过渡 -->
         <div class="space" id="rizhi-div"></div>
+        <!-- 日志 -->
         <section class="bankuai" id="rizhi">
             <h2 class="bk-title">一篇日志</h2>
             <div class="rizhi-content-border">
-            <div class="rizhi-content">23/08/29 开始打代码</div>
+            <div class="rizhi-content">23/08/29 开始制作网页</div>
+            <div class="rizhi-content">23/08/31 框架制作完成</div>
+            <div class="rizhi-content">23/09/02 添加网页内容</div>
+            <div class="rizhi-content">23/09/05 网页制作完成</div>
+            <div class="rizhi-content">xx/xx/xx . . .</div>
             </div>
         </section>
     </main>
+    <!-- 页尾 -->
     <footer>
-
+        <p>已经到底部了</p>
+        <hr>
     </footer>
 </body>
 </html>
