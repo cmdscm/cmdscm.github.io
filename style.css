@@ -13,17 +13,18 @@
 footer{
     background-color: black;
     width: 100%;
-    min-height: 50vh;
+    min-height: 30vh;
+    padding-bottom: 2vh;
     margin-top:20vh;
 }
 /* 页尾提醒词 */
-footer p{
-    font-size: 10vh;
-    color:white;
+.footer-title{
+    font-size: 8vh;
+    color:gray;
     width:100%;
     height:auto;
-    padding-top:5px;
-    padding-bottom: 5px;
+    padding-top:2vh;
+    padding-bottom: 2vh;
     text-align: center;
 }
 /* 页尾分割线 */
@@ -31,7 +32,37 @@ footer hr{
     width:90%;
     margin-left:5%;
     height: 1vh;
-    color:white;
+    color:gray;
+    background-color: gray;
+}
+/* 页尾内容 */
+.footer-content{
+    display: inline-block;
+    width: 30%;
+    height: 30vh;
+    border-bottom: 2px solid gray;
+    margin-top: 2vh;
+    color: white;
+}
+#content-left{
+    margin-left: 5%;
+}
+#content-left p{
+    padding:0;
+    margin:0;
+    color: gray;
+    width:90%;
+    height: auto;
+}
+#content{
+    margin-left: 5%;
+}
+#content p{
+    padding:0;
+    margin:0;
+    color: gray;
+    width:90%;
+    height: auto;
 }
 /* 页头 */
 header{
@@ -96,7 +127,7 @@ body{
 /* 页面主体 */
 main{
     width:80%;
-    height:450vh;
+    height:auto;
     /*position: absolute;*/
     margin-left:10%;
     background-color:white;
@@ -229,18 +260,18 @@ h2{
     overflow: hidden;
 }
 .rizhi-content{
-    width:90%;
-    margin-left:5%;
+    width:50%;
+    margin-left:25%;
     padding-top: 10px;
     padding-bottom:10px ;
-    text-align: center;
+    text-align: left;
 }
 
 /* 打字动画 */
 
 /* 定义元素 */
 #welcome-section{
-    width:100%;min-height: 100vh;padding-top: 10vh;
+    width:100%;min-height: 100vh;
     background-color: rgb(86, 86, 86);
     display: flex;justify-content: center;
     align-items: center;
