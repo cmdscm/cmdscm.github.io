@@ -5,10 +5,14 @@
     text-decoration: none;
     box-sizing: border-box;
 }
+a{
+    color:white;
+}
 /* 变量 */
 :root{
     --a:#ffffff;
 }
+/* 自适应 */
 /* 页尾 */
 footer{
     background-color: black;
@@ -65,55 +69,70 @@ footer hr{
     height: auto;
 }
 /* 页头 */
-header{
-    min-height: 10vh;
-    min-width: 700px;
+header{    
     position: fixed;
     background-color:black;
     width:100%;
     height:10vh;
     z-index: 2;
+    opacity: 0.8;
+}
+/* 页头logo */
+header h1{
+    display: inline-block;
+    width:auto;
+    height: 100%;
+    color:white;
+    font-weight: lighter;
+    padding-top: 2vh;
+    margin-left: 1vw;
+}
+/* >=450px */
+@media (max-height:450px){
+    header h1{padding-top: 0;}
+}
+/* >=350px */
+@media (max-height:350px){
+    header h1{color: transparent;}
 }
 /* 页头导航栏 */
 header nav{
     height:10vh;
-    width:60%;
-}
-/* 页头logo */
-header p{
-
-    display: inline-block;
-    width:10vh;
-    height: 10vh;
-    color:white;
-    font-size: 5vh;
-    padding-left: 2.5%;
-    padding-top: 2vh;
+    width:auto;
+    float: right;
+    margin-right: 1vw;
+    border: none;
 }
 /* 页头导航栏链接 */
 header nav a{
     position: relative;
     display: inline-block;
-    width:20%;
-    height:100%;
-    padding:10px;
-    height:auto;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    width:auto;
+    height:5vh;
+    padding-bottom: 1vh;
     text-align: center;
-    font-size: 3vh;
+    font-size: x-large;
+    overflow: hidden;
+    margin-top: 2vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
 }
 header nav a:hover{
     background-color: white;
     color:gray;
 }
-a{
-    color:white;
+/* >=570px */
+@media (max-height:570px){
+    header nav a{overflow: inherit;padding: 0;margin: 0;}
+}
+/* >=330px */
+@media (max-height:330px){
+    header nav a{color: transparent;}
+    header nav a:hover{color: transparent;background-color: transparent;}
 }
 /* 页面背景 */
 body{
-    min-width:700px;
+    /*min-width:700px;*/
     min-height: 500px;
     width:100%;
     height:100%;
@@ -148,6 +167,10 @@ section{
     width:100%;
     height:10vh;
 }
+/* 页头遮挡板块过渡 */
+#welcome-div{
+    background: rgb(86,86,86);
+}
 /* 个人简介板块过渡 */
 #jianjie-div{
     background:linear-gradient(
@@ -159,15 +182,21 @@ section{
 /* 一篇日志板块过渡 */
 #rizhi-div{
     background:linear-gradient(
-        lightgreen,orange);}
+        lightgreen,rgb(255,230,0));}
 /*板块标题*/
-h2{
+h2.bk-title{
     width:100%;
     height:10vh;
     text-align: center;
     font-size: 30px;
     padding-top:10px;
     font-family:'Gill Sans', 'Gill Sans MT', sans-serif;
+}
+/* 自适应 */
+@media(max-height:300px){
+    h2.bk-title{
+        color: transparent;
+    }
 }
 /* 个人简介内容 */
 .bk-one-content{
@@ -188,6 +217,7 @@ h2{
     height:auto;
     padding-bottom: 10vh;
     background-color: lightgreen;
+    min-height: 300px;
 }
 /* 我的账号内容 */
 .zhanghao-content-border{
@@ -216,22 +246,28 @@ h2{
     border:3px solid white;
 }
 .zhanghao-content a{
-    float: right;
-    width: 15vh;
+    float: right top;
+    width: 15vw;
     height: 8vh;
     font-size: 5vh;
     background-color: green;
     border-radius: 2vh;
     text-align: center;
+    max-width: 150px;
 }
 .zhanghao-content h3{
-    text-align: center;
-    font-size: 30px;
-    width:60%;
+    text-align:center;
+    font-size: xx-large;
+    width:50%;
     height: 10vh;
     margin-left: 5%;
     color: black;
 }
+/* 自适应 */
+@media (max-height:500px) {
+    .zhanghao-content h3{font-size: x-large;}
+}
+/* 悬浮状态 */
 .zhanghao-content img:hover{
     transform: scale(1.2) ;
     border:3px solid black;
@@ -247,7 +283,7 @@ h2{
 #rizhi{
     width:100%;
     height:111vh;
-    background-color: orange;
+    background-color: rgb(255, 230, 0);
 }
 /* 一篇日志内容 */
 .rizhi-content-border{
@@ -257,7 +293,7 @@ h2{
     height:60vh;
     border:3px rgb(86,86,86) dashed;
     border-radius: 25px;
-    overflow: hidden;
+    overflow:hidden;
 }
 .rizhi-content{
     width:50%;
@@ -280,7 +316,7 @@ h1[class=welcome_h1]{
     font-size: 80px;
     color:white;
     position: relative;
-    animation: color_h1 5s 11s infinite;}
+    animation: color_h1 5s 9s infinite;}
 h1[class=welcome_h1]::after, h1::before{
     content: '';
     position:absolute;inset:0;}
@@ -290,20 +326,18 @@ h1[class=welcome_h1]::after, h1::before{
     from,to{background-color:black;}
     50%{background-color: white;}}
 @keyframes color_h1{
-    from,to{box-shadow: none;color:white;}
-    25%{box-shadow: inset -5px -5px white;}
-    49%{box-shadow: inset 0 0 white;}
-    50%{box-shadow: inset 0 0 black;}
-    75%{box-shadow: inset 5px 5px black;}}
+    from,to{border: #ffffff solid 2px;}
+    50%{border: black solid 2px;}
+}
 @keyframes yingcang{
     from{opacity: 1;}
     to{background-color: rgb(86,86,86);opacity: 0;}}
 /* 使用动画 */
-h1::before{
+h1.welcome_h1::before{
     background-color:rgb(86, 86, 86);
     animation: type 5s 500ms steps(7) forwards;}
 h1::after{width:3px;
     animation: type 5s  500ms steps(7) forwards,
     repeat_link 500ms forwards,
-    yingcang 3s 10.5s forwards;
+    yingcang 3s 6s forwards;
     background-color:black;}
