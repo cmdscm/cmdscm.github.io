@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三角形</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .sjx{
+            width: 400px;
+            height: 200px;
+            display: flex;
+            background-color: white;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20vh;
+            clip-path: polygon(0 200px,200px 0,400px 200px);
+        }
+        .cir{
+            width: 400px;
+            height: 200px;
+            display: flex;
+            background: radial-gradient(circle at center top ,transparent 100px ,white 0);
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40vh;
+        }    
+    </style>
+</head>
+<body>
+    <div class="sjx"></div>
+    <div class="cir"></div>
+</body>
+</html>

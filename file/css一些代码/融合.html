@@ -1,0 +1,39 @@
+<html>
+<style>
+.all{
+    width: 900px;
+    height: 600px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: contrast(100);
+}
+.box1{
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    float: left;
+    border-radius: 50%;
+    /*设置模糊，数字越大，融合越多*/
+    filter: blur(25px);
+}
+.box2{
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    float: left;
+    border-radius: 50%;
+    /*设置模糊，数字越大，融合越多*/
+    filter: blur(25px);
+}
+
+</style>
+    <body>
+        
+<div class="all">
+<div class="box1"></div>
+<div class="box2"></div>
+</div>
+    </body>
+</html>

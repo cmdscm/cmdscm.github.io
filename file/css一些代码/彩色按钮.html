@@ -1,0 +1,35 @@
+<html>
+    <style>
+        .anniu::before{
+            content:'';
+            width: 200px;
+            height: 60px;
+            background-color: #222;
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            transition: all 35s;
+            /*调整圆角要记到*/
+            border-radius: 10px;
+            /*线性动画*/
+            z-index: -1;
+            /*设置颜色朝45度变换*/
+            background: linear-gradient(45deg,red,orange,yellow,green,pink,blue,purple);
+            /*模糊*/
+            filter: blur(5px);
+            background-size: 1000%;
+            animation: yanse 40s linear infinite;
+        }
+        @keyframes yanse{
+            0%{background-position: 0 0;}
+            100%{background-position: 1000% 0;}
+        }
+
+
+    </style>
+    <div class="anniu"></div>
+    <div class="biankuang"></div>
+
+    
+    
+</html>

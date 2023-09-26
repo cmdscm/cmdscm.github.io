@@ -1,0 +1,66 @@
+<style>
+    .cube{
+        width: 200px;
+        height: 200px;
+        top: 50px;
+        right: -50px;
+        position: relative;
+        transform-style: preserve-3d;
+        animation:zhuan 10s linear infinite;
+    }
+    .box{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #fff;
+
+    }
+    .box1{
+        background: red;
+        transform: translateZ(100px);
+    }
+    .box2{
+        background: blue;
+        transform: translateX(0px) rotateY(90deg);
+        transform-origin: right;
+    }
+    .box3{
+        background: pink;
+        transform: translateY(0px) rotateX(90deg);
+        transform-origin: top;
+    }
+    .box4{
+        background: orange;
+        transform: translateZ(0px) ;
+    }
+    .box5{
+        background: yellow;
+        transform: translateX(-100px) rotateY(90deg);
+        transform-origin: right;
+    }
+    .box6{
+        background: green;
+        transform: translateY(100px) rotateX(90deg);
+        transform-origin: top;
+    }
+@keyframes zhuan{
+    0%{transform: rotateY(0deg) rotateZ(0deg);}
+    20%{transform: rotateY(90deg) rotateZ(90deg);}
+    30%{transform: rotateY(180deg) rotateZ(180deg);}
+    50%{transform: rotateY(270deg) rotateZ(360deg);}
+    70%{transform: rotateY(-90deg) rotateZ(-90deg);}
+    90%{transform: rotateY(-180deg) rotateZ(-180deg);}
+    100%{transform: rotateY(0deg) rotateZ(0deg);}
+}
+</style>
+
+<div class="cube">
+<div class="box box1"></div>
+<div class="box box2"></div>
+<div class="box box3"></div>
+<div class="box box4"></div>
+<div class="box box5"></div>
+<div class="box box6"></div>
+</div>

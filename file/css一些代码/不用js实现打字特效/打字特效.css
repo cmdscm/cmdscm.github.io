@@ -1,0 +1,53 @@
+body{
+    min-height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:gray;
+    font-family: monospace;
+    color:white;
+}
+h1{
+    font-size: 50px;
+    position: relative;
+}
+h1::after, h1::before{
+    content: '';
+    position:absolute;
+    inset:0;
+}
+h1::before{
+
+    background-color:gray;
+    animation: type 5s 500ms steps(11) forwards,
+    del_h1 3s 5.5s steps(6) forwards;
+}
+h1::after{
+    width:3px;
+    animation: type 5s  500ms steps(11) forwards,
+    repeat_link 500ms infinite,
+    del_h1 3s 5.5s steps(6) forwards;
+    background-color:black;
+}
+@keyframes type {
+    to{
+        left:100%;
+    }
+}
+@keyframes repeat_link {
+    from,to{
+        background-color:black;
+    }
+    50%{
+        background-color: white;
+    }
+}
+@keyframes del_h1 {
+    from{
+        left:100%;
+
+    }
+    to{
+        left:5ch;
+    }
+}

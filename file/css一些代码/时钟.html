@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时钟</title>
+    <style>
+        *{
+            font-family: sans-serif;
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: gray;
+        }
+        .clock{
+            position:relative;
+            width: 450px;
+            height: 550px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: skyblue;
+            border-radius: 50px;
+            border-top-left-radius: 250px;
+            border-top-right-radius: 250px;
+            box-shadow: 45px 45px 45px -15px rgba(0,0,0,0.15),
+            inset 15px 15px 10px rgba(255, 255, 255, 0.75),
+            -15px -15px 35px rgba(255, 255, 255, 0.55),
+            inset -2px -2px 15px rgba(0, 0, 0, 0.2);
+        }
+        .numbers{
+            position: absolute;
+            width: 390px;
+            height:390px;
+            background: #152b6f;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 7px 7px 22px #152b4a,
+            inset 7px 7px 7px rgba(255,255,255,0.55),
+            -9px 9px 15px rgba(255,255,255,1);
+        }
+        .numbers::before{
+            content: '';
+            position: absolute;
+            width: 4px;
+            height:4px;
+            border-radius: 50%;
+            background: #e91e63;
+            z-index: 1000;
+            box-shadow: 0 0 0 1px #e91e63,
+            0 0 0 3px #fff,
+            0 0 5px 5px rgba(0, 0, 0, 0.15);
+        }
+        .numbers span{
+            position: absolute;
+            inset:15px;
+            text-align: center;
+            color: #fff;
+            font-size:1.25em;
+            transform: rotate(calc(30deg * var(--i)));
+        }
+        .numbers span b{
+            font-weight: 400;
+            display: inline-block;
+            transform: rotate(calc(-30deg * var(--i)));
+        }
+        .numbers .circle{
+            position: absolute;
+            width: 280px;
+            height:280px;
+            border:1px solid #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            z-index:10;
+
+        }
+        .numbers .circle i{
+            position: absolute;
+            width:6px;
+            height:50%;
+            background:var(--clr) ;
+            opacity: 0.75;
+            transform-origin: bottom;
+            transform: scaleY(0.5);
+        }
+        .numbers .circle#sec i{
+            width:2px;
+        }
+
+        .numbers .circle#min i{
+            width: 4px;
+        }
+        .numbers .circle#min{
+            width: 230px;
+            height: 230px;
+        }
+        .numbers .circle#hrs{
+            width:180px;
+            height: 180px;
+        }
+        .numbers .circle::before{
+            content: '';
+            position: absolute;
+            top:-6px;
+            left:50%;
+            width: 10px;
+            height: 10px;
+            background:var(--clr);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 0 20px var(--clr),
+            0 0 60px var(--clr);
+
+        }
+        </style>
+</head>
+<body>
+    <div class="clock">
+        <div class="numbers">
+            <div class="circle" id="sec" style="--clr:lightgreen;"><i></i></div>
+            <div class="circle" id="min" style="--clr:yellow;"><i></i></div>
+            <div class="circle" id="hrs" style="--clr:red;"><i></i></div>
+            <span style="--i:0;"><b>12</b></span>
+            <span style="--i:1;"><b>1</b></span>
+            <span style="--i:2;"><b>2</b></span>
+            <span style="--i:3;"><b>3</b></span>
+            <span style="--i:4;"><b>4</b></span>
+            <span style="--i:5;"><b>5</b></span>
+            <span style="--i:6;"><b>6</b></span>
+            <span style="--i:7;"><b>7</b></span>
+            <span style="--i:8;"><b>8</b></span>
+            <span style="--i:9;"><b>9</b></span>
+            <span style="--i:10;"><b>10</b></span>
+            <span style="--i:11;"><b>11</b></span>
+        </div>
+    </div>
+    <script>
+        let hr = document.querySelector('#hrs');
+        let mn = document.querySelector('#min');
+        let sc = document.querySelector('#sec');
+
+        let day = new Date();
+        let hh = day.getHours() * 30;
+        let mm = day.getMinutes() *6;
+        let ss = day.getSeconds() * 6;
+    
+        hr.style.transform = `rotateZ(${hh+(mm/12)}deg)`;
+        mn.style.transform = `rotateZ(${mm}deg)`;
+        sc.style.transform = `rotateZ(${ss}deg)`;
+        
+        setInterval(updateClock, 500);
+    </script>
+</body>
+</html>

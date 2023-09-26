@@ -1,0 +1,15 @@
+selection 选中时的样式
+first-letter 第一个字母
+shape-outside 围绕元素环绕,前面要加float
+mix-blend-mode 让p元素和背景融合
+-wedkit-background-clip:text 让背景裁切成文本的形状，记得加color:transparant
+
+父元素flex
+有3子元素是空的用flex-grow:1;就是每个子元素从0起跑线吃掉一份
+{|1||2||3|}
+假如1有内容就是1从内容起跑线走，其他还是0起跑线
+{|$$$#1||2||3|}
+这样就不是均分
+所以加上flex-basis：0
+这样每个元素都是0起跑线
+就可以保持均分
