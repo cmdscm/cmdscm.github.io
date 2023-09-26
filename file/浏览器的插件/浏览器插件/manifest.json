@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+    "name": "显示网页网址",
+    "version": "1.0",
+    "description": "在网页右上角显示当前正在浏览的网页网址",
+    "icons": {
+      "48": "icon.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "run_at": "document_end"
+      }
+    ]
+  }
+  

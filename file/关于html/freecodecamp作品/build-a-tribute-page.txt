@@ -1,0 +1,59 @@
+** start of undefined **
+
+<!DOCTYPE>
+<html lang="en">
+<head>
+  <title>致敬页</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<main id="main">
+  <h1 id="title">这是一个页面标题</h1>
+  <div id="img-div">
+    <img id="imag" src="https://www.scratch-cn.cn/img/index/icon/sports_archery_01.png"><img id="image">
+    <figcaption id="img-caption">一张关于<b>像素小人</b>的图片</figcaption>
+  </div>
+  <div id="tribute-info">
+    这个网页其实没什么用 ，因为这个网页里面的<b>人物都不是现实世界里面存在的</b>，简单来说就是，这是一个为了<b>完任务</b>而做的网站 ——作者的话 
+  </div>
+  <a id="tribute-link" target="_blank" href="https://douyin.com">这是一个连接到别的网址的链接，没事别点</a>
+  
+  <div id="image"></div>
+</main>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+*{
+  margin:0;
+  padding:0;
+}
+a{
+  text-decoration: none;
+  color:white;
+  background-color:black;
+}
+body{
+  background-color:pink;
+}
+h1{
+  text-align:center;
+}
+a:hover{
+  color:black;
+  background-color:white;
+}
+img{
+  display:block;
+}
+#image{
+  max-width:100%;
+  margin:0 50%;
+}
+
+
+
+** end of undefined **
+

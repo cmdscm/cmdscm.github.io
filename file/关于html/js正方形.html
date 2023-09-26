@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>绘制正方形</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="200" height="200"></canvas>
+
+    <script>
+        // 获取 canvas 元素和 2D 绘图上下文
+        const canvas = document.getElementById("myCanvas");
+        const context = canvas.getContext("2d");
+
+        // 设置绘制颜色和边框
+        context.fillStyle = "red";
+        context.strokeStyle = "black";
+
+        // 绘制正方形
+        const size = 100; // 正方形的边长
+        const x = (canvas.width - size) / 2; // 正方形左上角 x 坐标
+        const y = (canvas.height - size) / 2; // 正方形左上角 y 坐标
+        context.fillRect(x, y, size, size); // 填充正方形
+        context.strokeRect(x, y, size, size); // 绘制正方形边框
+    </script>
+</body>
+</html>

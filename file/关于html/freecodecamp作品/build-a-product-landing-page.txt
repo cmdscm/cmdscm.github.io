@@ -1,0 +1,105 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品登录页</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="header">
+        <img src="https://cmdscm.github.io/qqimg.jpg" id="header-img" alt="a clever sheep">
+        <nav id="nav-bar">
+            <a href="#video" class="nav-link">video</a>
+            <a href="#form" class="nav-link">form</a>
+            <a href="#flexbox" class="nav-link">three</a>
+        </nav>
+    </header>
+    <section id="video-section">
+    <video autoplay id="video" src="产品登录页视频.mp4" controls loop>
+    </video>
+</section>
+<section id="form-section">
+<form id="form" target="_blank" action="https://www.freecodecamp.com/email-submit">
+    <input id="email" type="email" name="email" placeholder="whirt your email">
+    <input id="submit" type="submit" value="提交" 提交>
+</form></section>
+<div id="flexbox"></div>
+</body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+*{
+    margin:0;
+    padding: 0;
+    text-decoration: none;
+}
+body{
+    min-width:500px;
+    min-height:500px;
+}
+header{
+    width:100%;
+    height:15vh;
+    box-shadow: 0 5px 50px gray;
+    position:fixed;
+    z-index:1;
+    background-color:white
+}
+header *{
+    display:inline-block;
+    z-index:999;
+}
+header nav{
+    float: inline-end;
+    height:15vh;
+    width:calc(100% / 4);
+    padding:20px;
+}
+header img{
+    float: inline-start;
+    height:15vh;
+    width:auto;
+}
+.nav-link:hover{
+    background-color:gray;
+    opacity: 0.5;
+    color:white;
+}
+video{
+    width:60vw;
+    height:80vh;
+    position:relative;
+    top:20vh;
+    left:0;
+    border:2px solid white;
+}
+#video-section{
+    height:100vh;
+    width:100%;
+    background-color:black;
+}
+#form-section{
+    height:50vh;
+    width:100%;
+    background-color:gray
+}
+#submit{
+    width:50px;
+    height:50px;
+}
+@media (min-width:400px){
+    
+}
+#flexbox{
+    display:flex;
+}
+
+** end of undefined **
+

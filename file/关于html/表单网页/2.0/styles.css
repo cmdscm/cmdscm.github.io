@@ -1,0 +1,209 @@
+/* 初始化 */
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+/* 网页背景 */
+body{
+    width:100%;
+    background-color: #6f6f8f;
+}
+/* 问卷背景 */
+main{
+    width:90%;
+    height:auto;
+    background-color: #e6e6e6;
+    box-shadow: 10px 10px 10px black,
+    inset 10px 10px 10px white;
+    position: absolute;
+    left:5%;
+}
+/* 问卷标题 */
+h1#title{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    background-color: #c076df;
+    color: white;
+    padding-top:5vh ;
+    padding-bottom: 5vh;
+    text-shadow: 3px 3px 0px #55396f;
+}
+/* 问卷页尾 */
+#main-footer{
+    width:100%;
+    height: 2vh;
+    background-color: #6145eb;
+}
+/* 填写提示 */
+#ts-one{
+    position: relative;
+    width: 100%;
+    background-color: #55396f;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#ts-one b{
+    color:yellow;
+}
+/* 分隔线 */
+hr{
+    width: 90%;
+    height: 3px;
+    background-color: gray;
+    margin-left: 5%;
+    border-radius: 2px;
+    border: none;
+}
+/* 填写模块 */
+fieldset{
+    position: relative;
+    width:90%;
+    height:auto;
+    margin-left: 5%;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    border: #6f6f8f 2px solid;
+    border-radius: 5px;
+}
+/* 模块标题 */
+h2.mk-title{
+    width: 100%;
+    text-align: center;
+    color: #6145eb;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+/* 模块限制输入框 */
+.person-input-border{
+    width:80%;
+    height:auto;
+    padding: 1vh;
+    margin-left: 10%;;
+}
+/* 内联元素 */
+label{
+    width: 100%;
+    padding-bottom: 1vh;
+    padding-top: 1vh;
+}
+/* 输入框 */
+input[class=enter]{
+    width: 100%;
+    border: none;
+    border-bottom: #6145eb solid 2px;
+    background-color: transparent;
+    color: #6145eb;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+input.enter:focus{
+    border: #c076df 2px solid;
+    background-color: white;
+}
+/* 选择框 */
+select{
+    width: 100%;
+    border: none;
+    border-bottom: #6145eb solid 2px;
+    background-color: transparent;
+    color: #6145eb;
+}
+/* 大型输入框 */
+textarea{
+    width:80%;
+    height:20vh;
+    background-color: whitesmoke;
+    resize: none;
+    margin-left: 10%;
+    color: #6145eb;
+    padding: 5px;
+    border-radius: 10px;
+    border: #6145eb solid 2px;
+}
+textarea::-webkit-scrollbar{
+    display: none;
+}
+/* 阅读协议提问 */
+.xieyi-title{
+    width: 100%;
+    text-align: center;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+/* 用户协议 */
+#person-xieyi{
+    width: 100%;
+    color: #6145eb;
+    text-align: center;
+}
+#person-xieyi-b{
+    background-color: yellow;
+}
+#person-xieyi-b:hover{
+    background-color: #6145eb;
+    color: yellow;
+}
+/* 阅读协议选项 */
+#yuedu{
+    margin-left: 1vw;
+}
+#xieyi{
+    margin-left: 1vw;
+}
+/* 提交按钮 */
+.submit{
+    width: 50%;
+    height:10vh;
+    margin-bottom:50px;
+    margin-top: 30px;
+    margin-left: 25%;
+    border:3px solid black;
+    border-radius: 50px;
+    background-color: skyblue;
+    color:white;
+    font-size: 25px;
+    opacity: 0.75;
+}
+.submit:hover{
+    border-radius: 20px;
+    background-color: rgb(58, 174, 220);
+    font-size: 30px;
+    opacity: 1;
+}
+/* 图标 */
+i.text-svg{
+    width: 2vh;
+    height: 2vh;
+    font-size: 50%;
+}
+i#title-svg{
+    color: white;
+    padding-left: 1vw;
+}
+/*.tishi{
+    margin-left: 25%;
+    padding:10px;
+    width: 50%;
+    text-align: center;
+    font-family: monospace,sans-serif;
+    color:white;
+    font-weight: bold;
+    background-color: #6b6b89;
+    margin-bottom: 20px;
+}*/
+/* textarea::-webkit-scrollbar{
+    width: 5%;
+    background-color: white;
+}
+textarea::-webkit-scrollbar-thumb{
+    background-color: #808090;
+} */

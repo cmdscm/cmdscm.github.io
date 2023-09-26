@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>文字闪烁动画示例</title>
+    <style>
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .blinking-text {
+            animation: blink 1.5s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="blinking-text">这是闪烁的文字</div>
+</body>
+</html>

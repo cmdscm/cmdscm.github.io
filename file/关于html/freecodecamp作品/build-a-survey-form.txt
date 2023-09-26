@@ -1,0 +1,101 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>调查表单</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <h1 id="title">WELCOME</h1>
+    <p id="description">这是一个调查表单</p>
+    <form id="survey-form">
+      <fieldset>
+      <label for="name" id="name-label">请输入你的名字： <input id="name" type="text" placeholder="name" required></label>
+      
+      <label for="email" id="email-label">请输入你的邮箱： <input id="email" type="email" placeholder="email" required> 
+      </label>
+      <label for="number" id="number-label">
+        请输入你的年龄： <input type="number" id="number" min="1" max="130"required placeholder="age">
+      </label>
+      <label>
+        你的性别是：
+      <select id="dropdown">
+        <option value="">男</option>
+        <option value="1">女</option>
+        <option value="2">隐私</option>
+      </select>
+      </label>
+      </fieldset>
+      <fieldset>
+      <label for="tuisong">
+        <input type="radio" id="ytuisong" name="tui" class="ts" value="y">接受每日消息推送
+        <input type="radio" id="ntuisong" name="tui" class="ts" value="i">不接受每日消息推送
+      </label>
+      </fieldset>
+      <fieldset>
+      <label>
+        <input type="checkbox" id="xieyi" value="r">阅读我们的协议
+        <input type="checkbox" id="xieyi" value="t">同意我们的协议
+      </label>
+      </fieldset>
+      <fieldset>
+        <textarea>
+        </textarea>
+        </fieldset>
+        <input type="submit" id="submit">
+    </form>
+  </body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+body{
+  background-color:rgb(100,100,200);
+}
+h1,p{
+  color:white;
+  text-align:center;
+}
+p{
+  font-size:20px;
+}
+form{
+  text-align:center;
+  color:white;
+}
+input{
+  width:100%;
+  background-color:skyblue;
+}
+fieldset{
+  border-color:blue;
+  border:2px solid blue;
+  border-left:0;
+  border-right:0;
+  border-top:0;
+  
+  padding:10px;
+  margin:10px 10px;
+}
+input[id="xieyi"]{
+  width:50%;
+  padding:10px;
+  vertical-align: middle;
+}
+input[id="submit"]{
+  height:40px;
+  color:white;
+  background-color:gray;
+}
+.ts{
+  width:50%;
+  padding:10px;
+  vertical-align: middle;
+}
+
+** end of undefined **
+

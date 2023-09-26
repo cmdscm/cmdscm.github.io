@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>打字效果示例</title>
+    <style>
+        .typewriter {
+            overflow: hidden; /* 隐藏溢出部分 */
+            border-right: .15em solid orange; /* 添加光标效果 */
+            white-space: nowrap; /* 文本不换行 */
+            margin: 0 auto; /* 居中显示 */
+            letter-spacing: .15em; /* 字符间距 */
+            animation:
+                typing 3.5s steps(40, end),
+                blink-caret .75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: orange; }
+        }
+    </style>
+</head>
+<body>
+    <div class="typewriter">这是一个打字效果示例</div>
+
+    <script>
+        const text = "这是一个打字效果示例";
+        let index = 0;
+        let isDeleting = false;
+        function typewriter() {
+            const typewriterText = document.querySelector('.typewriter');
+            if (index < text.length && !isDeleting) {
+                typewriterText.textContent += text.charAt(index);
+                index++;
+                setTimeout(typewriter, 15); // 调整打字速度
+            } else if (index >= text.length && !isDeleting) {
+                isDeleting = true;
+                setTimeout(typewriter, 1000); // 延迟一段时间后开始删除
+            } else {
+                typewriterText.textContent = text.substring(0, index);
+                index--;
+                if (index === 0) {
+                    isDeleting = false;
+                    setTimeout(typewriter, 1000); // 延迟一段时间后再次开始打字
+                } else {
+                    setTimeout(typewriter, 100); // 调整删除速度
+                }
+            }
+        }
+
+        typewriter();
+    </script>
+</body>
+</html>

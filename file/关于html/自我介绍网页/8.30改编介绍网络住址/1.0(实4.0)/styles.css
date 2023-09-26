@@ -1,0 +1,343 @@
+/* 初始 */
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+a{
+    color:white;
+}
+/* 变量 */
+:root{
+    --a:#ffffff;
+}
+/* 自适应 */
+/* 页尾 */
+footer{
+    background-color: black;
+    width: 100%;
+    min-height: 30vh;
+    padding-bottom: 2vh;
+    margin-top:20vh;
+}
+/* 页尾提醒词 */
+.footer-title{
+    font-size: 8vh;
+    color:gray;
+    width:100%;
+    height:auto;
+    padding-top:2vh;
+    padding-bottom: 2vh;
+    text-align: center;
+}
+/* 页尾分割线 */
+footer hr{
+    width:90%;
+    margin-left:5%;
+    height: 1vh;
+    color:gray;
+    background-color: gray;
+}
+/* 页尾内容 */
+.footer-content{
+    display: inline-block;
+    width: 30%;
+    height: 30vh;
+    border-bottom: 2px solid gray;
+    margin-top: 2vh;
+    color: white;
+}
+#content-left{
+    margin-left: 5%;
+}
+#content-left p{
+    padding:0;
+    margin:0;
+    color: gray;
+    width:90%;
+    height: auto;
+}
+#content{
+    margin-left: 5%;
+}
+#content p{
+    padding:0;
+    margin:0;
+    color: gray;
+    width:90%;
+    height: auto;
+}
+/* 页头 */
+header{    
+    position: fixed;
+    background-color:black;
+    width:100%;
+    height:10vh;
+    z-index: 2;
+    opacity: 0.8;
+}
+/* 页头logo */
+header h1{
+    display: inline-block;
+    width:auto;
+    height: 100%;
+    color:white;
+    font-weight: lighter;
+    padding-top: 2vh;
+    margin-left: 1vw;
+}
+/* >=450px */
+@media (max-height:450px){
+    header h1{padding-top: 0;}
+}
+/* >=350px */
+@media (max-height:350px){
+    header h1{color: transparent;}
+}
+/* 页头导航栏 */
+header nav{
+    height:10vh;
+    width:auto;
+    float: right;
+    margin-right: 1vw;
+    border: none;
+}
+/* 页头导航栏链接 */
+header nav a{
+    position: relative;
+    display: inline-block;
+    width:auto;
+    height:5vh;
+    padding-bottom: 1vh;
+    text-align: center;
+    font-size: x-large;
+    overflow: hidden;
+    margin-top: 2vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+header nav a:hover{
+    background-color: white;
+    color:gray;
+}
+/* >=570px */
+@media (max-height:570px){
+    header nav a{overflow: inherit;padding: 0;margin: 0;}
+}
+/* >=330px */
+@media (max-height:330px){
+    header nav a{color: transparent;}
+    header nav a:hover{color: transparent;background-color: transparent;}
+}
+/* 页面背景 */
+body{
+    /*min-width:700px;*/
+    min-height: 500px;
+    width:100%;
+    height:100%;
+    background:repeating-linear-gradient(
+        skyblue 0%,  
+        skyblue 5%,
+        yellow 5%,
+        yellow 10%
+    )
+}
+/* 页面主体 */
+main{
+    width:80%;
+    height:auto;
+    /*position: absolute;*/
+    margin-left:10%;
+    background-color:white;
+    border-left: 3px solid gray;
+    border-right: 3px solid gray;
+    border-bottom: 3px solid gray;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    overflow: hidden;
+}
+/* 板块 */
+section{
+    width:100%;
+    height:100vh;
+}
+/* 板块过渡 */
+.space{
+    width:100%;
+    height:10vh;
+}
+/* 页头遮挡板块过渡 */
+#welcome-div{
+    background: rgb(86,86,86);
+}
+/* 个人简介板块过渡 */
+#jianjie-div{
+    background:linear-gradient(
+        rgb(86,86,86),white);}
+/* 我的账号板块过渡 */
+#zhanghao-div{
+    background:linear-gradient(
+        white,lightgreen);}
+/* 一篇日志板块过渡 */
+#rizhi-div{
+    background:linear-gradient(
+        lightgreen,rgb(255,230,0));}
+/*板块标题*/
+h2.bk-title{
+    width:100%;
+    height:10vh;
+    text-align: center;
+    font-size: 30px;
+    padding-top:10px;
+    font-family:'Gill Sans', 'Gill Sans MT', sans-serif;
+}
+/* 自适应 */
+@media(max-height:300px){
+    h2.bk-title{
+        color: transparent;
+    }
+}
+/* 个人简介内容 */
+.bk-one-content{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10vh;
+    height:60vh;
+    padding:10vh;
+    background-color: skyblue;
+    border-radius: 50px;
+}
+.bk-one-content b{
+    float: right;
+}
+/* 我的账号背景 */
+#zhanghao{
+    width:100%;
+    height:auto;
+    padding-bottom: 10vh;
+    background-color: lightgreen;
+    min-height: 300px;
+}
+/* 我的账号内容 */
+.zhanghao-content-border{
+    width:90%;
+    margin-left:5%;
+    height:auto;
+}
+.zhanghao-content{
+    width:100%;
+    height:auto;
+    padding:5vh;
+    margin-top:5vh;
+    margin-bottom: 5vh;
+    border-radius: 5vh;
+    border:3px dashed green
+}
+/* 我的账号内容的设置 */
+.zhanghao-content img ,.zhanghao-content a,.zhanghao-content h3{
+    display: inline-block;
+}
+.zhanghao-content img{
+    width:15vh;
+    height:15vh;
+    border-radius: 50%;
+    overflow: hidden;
+    border:3px solid white;
+}
+.zhanghao-content a{
+    float: right top;
+    width: 15vw;
+    height: 8vh;
+    font-size: 5vh;
+    background-color: green;
+    border-radius: 2vh;
+    text-align: center;
+    max-width: 150px;
+}
+.zhanghao-content h3{
+    text-align:center;
+    font-size: xx-large;
+    width:50%;
+    height: 10vh;
+    margin-left: 5%;
+    color: black;
+}
+/* 自适应 */
+@media (max-height:500px) {
+    .zhanghao-content h3{font-size: x-large;}
+}
+/* 悬浮状态 */
+.zhanghao-content img:hover{
+    transform: scale(1.2) ;
+    border:3px solid black;
+    cursor:not-allowed ;
+}
+.zhanghao-content a:hover{
+    background-color: rgb(1, 76, 1);
+}
+.zhanghao-content h3:hover{
+    color:green;
+}
+/* 一篇日志背景 */
+#rizhi{
+    width:100%;
+    height:111vh;
+    background-color: rgb(255, 230, 0);
+}
+/* 一篇日志内容 */
+.rizhi-content-border{
+    width:90%;
+    margin-top: 10vh;
+    margin-left: 5%;
+    height:60vh;
+    border:3px rgb(86,86,86) dashed;
+    border-radius: 25px;
+    overflow:hidden;
+}
+.rizhi-content{
+    width:50%;
+    margin-left:25%;
+    padding-top: 10px;
+    padding-bottom:10px ;
+    text-align: left;
+}
+
+/* 打字动画 */
+
+/* 定义元素 */
+#welcome-section{
+    width:100%;min-height: 100vh;
+    background-color: rgb(86, 86, 86);
+    display: flex;justify-content: center;
+    align-items: center;
+    font-family: monospace;}
+h1[class=welcome_h1]{
+    font-size: 80px;
+    color:white;
+    position: relative;
+    animation: color_h1 5s 9s infinite;}
+h1[class=welcome_h1]::after, h1::before{
+    content: '';
+    position:absolute;inset:0;}
+/* 定义动画 */
+@keyframes type {to{left:100%;}}
+@keyframes repeat_link {
+    from,to{background-color:black;}
+    50%{background-color: white;}}
+@keyframes color_h1{
+    from,to{border: #ffffff solid 2px;}
+    50%{border: black solid 2px;}
+}
+@keyframes yingcang{
+    from{opacity: 1;}
+    to{background-color: rgb(86,86,86);opacity: 0;}}
+/* 使用动画 */
+h1.welcome_h1::before{
+    background-color:rgb(86, 86, 86);
+    animation: type 5s 500ms steps(7) forwards;}
+h1::after{width:3px;
+    animation: type 5s  500ms steps(7) forwards,
+    repeat_link 500ms forwards,
+    yingcang 3s 6s forwards;
+    background-color:black;}

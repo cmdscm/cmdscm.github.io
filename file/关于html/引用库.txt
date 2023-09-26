@@ -1,0 +1,6 @@
+图标
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"/>
+便捷库
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+网页标题图片
+<link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">

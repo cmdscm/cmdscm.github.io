@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>介绍网站</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+text-decoration: none;
+list-style: none;
+        }
+        .wangye{
+            margin: auto;
+        }
+        .header{
+            background: black;
+            width: 100%;
+            height: 80px;
+            margin: 0;
+            padding: 0;
+        }
+        .header p{
+            position: relative;
+            top: 10px;
+            color: white;
+            text-align: center;
+            font-size:40px;
+            text-shadow: 2px 2px gray;
+            animation: text-color 5s ease both infinite .5s;
+        }
+        @keyframes text-color{
+            0%{ color: white;text-shadow: 2px 2px  #808082;}
+            50%{color:gray;text-shadow: -2px -2px white;}
+            100%{color: white;text-shadow: 2px 2px #808085;}
+        }
+        p::selection{
+            background-color: yellowgreen;
+            color: yellow;
+            font-size: 30px;
+        }
+        .title-1{
+            text-align: center;
+            color: black;
+            font-size: 40px;
+            padding: 20px;
+        }
+        .kuaitext1{
+            margin: auto;
+            width: 95%;
+            height: 80px;
+            background-color: rgb(215, 215, 215);
+            border: gray 5px;
+            border-radius: 30px;
+            text-align: center;
+            padding: 10px;
+        }
+        .kuaitext1 b:hover{
+            color: green;
+        }
+        .kuaitext1 p{
+            padding: 20px;
+        }
+        body{
+            background-color: skyblue;
+        }
+        .title-2{
+            font-size: 40px;
+            text-align: center;
+            color: black;
+            padding: 20px;
+        }
+        .kuaitext2{
+            margin: 0;
+            width: 100%;
+            height: 120px;
+            background-color: black;
+            padding: 30px 0;
+            display: flex;
+        }
+        .kuaitext2 img{
+            position: relative;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            left: 30%;
+            transition: transform 0.5s, top 1s;
+        }
+        .kuaitext2 img:hover {
+            transform: scale(1.1);
+            top: -10px;
+            border: 5px solid white;
+        }
+        .bzhan_ziliao{
+            
+            width: 50%;
+            height: 120px;
+            float: right;
+        }
+        .bzhan{
+            position: relative;
+            color: white;
+            float: left;
+            left: 70%;
+            font-size: 40px;
+        }
+        .kuaitext2 p{
+            position: relative;
+            color: white;
+            float: left;
+            left: 80%;
+            font-size: 40px;
+        }
+        .kuaitext3{
+            margin: 0;
+            width: 100%;
+            height: 120px;
+            background-color: white;
+            padding: 30px 0;
+            display: flex;
+        }
+        .scratch_ziliao{
+            width: 50%;
+            height: 120px;
+            float: left;
+        }
+        .scratch{
+            font-size: 40px;
+        }
+        .kuaitext3 img{
+            position: relative;
+            
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            left: 65%;
+            transition: transform 0.5s, top 1s;
+        }
+        .kuaitext3 img:hover {
+            transform: scale(1.1);
+            top: -10px;
+            border: 5px solid black;
+        }
+        .kuaitext3 p{
+            position: relative;
+            color: black;
+            float: right;
+            right: 10%;
+            font-size: 40px;
+        }
+        span{
+            font-size: 20px;
+            color: white;
+        }
+        #teshu_p{
+            font-size: 20px;
+            color: black;
+        }
+        .title-3{
+            text-align: center;
+            font-size: 40px;
+            color: black;
+        }
+        .rizhi{
+            position: relative;
+            transform: translate( 5%,0);
+            width: 90%;
+            height: 500px;
+            margin: 0;
+            padding: 0;
+            border-radius: 10%;
+            background-color: white;
+            box-shadow: 3px 3px  blue;
+            float: left;
+        }
+        .rizhi p {
+            position: relative;
+            transform: translate(5%,10%);
+            font-size: 40px;
+            width: 95%;
+        }
+        .footer{
+            width: 100%; 
+            height:90px;
+            background-color: black;
+            color: white; 
+            position: relative;   
+            transform: translate(0,510px);       
+        }
+    </style>
+</head>
+<body>
+    <div class="wangye">
+        <div class="header">
+            <p>Welcome</p>
+        </div>
+        <div class="title-1">: 个人简介 :</div>
+        <div class='mokuai1' id='mokuai1'>
+            <section>
+                <div class="kuaitext1">
+                <p><b>GongYuqian</b>,男，中国江西人。马上就上六年级了。接触过编程，喜欢玩我的世界。梦想做一个<b>知名UP主</b></p>
+                </div>
+            </section>
+        </div>
+        <div class="title-2">: 网络住址 :</div>
+        <div class='mokuai2' id='mokuai2'>
+            <section>
+                <div class="kuaitext2">
+                    <img src="b站头像.jpg">
+                    <div class="bzhan_ziliao">
+                    <p class="bzhan"><strong>B站</strong><span>(https://www.bilibili.com)</span><br>
+                    <b>昵称</b>：聪明的电八</p><br>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <br>
+        <div class='mokuai3' id='mokuai3'>
+            <section>
+                <div class="kuaitext3">
+                    <img src="中社头像.png">
+                    <div class="scratch_ziliao">
+                    <p class="scratch"><strong>SC中社</strong><span id="teshu_p">(https://www.scratch-cn.cn/)</span><br>
+                    <b>昵称</b>：超**的牛马</p><br>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <br>
+        <div class='mokuai2' id='mokuai2'>
+            <section>
+                <div class="kuaitext2">
+                    <img src="qq头像.jpg">
+                    <div class="bzhan_ziliao">
+                    <p class="bzhan"><strong>QQ</strong><br>
+                    <b>账号</b> : 1348713675</p><br>
+                    </div>
+                </div>
+            </section>
+        </div><br>
+        <div class="title-3">: 日志/日记 :</div>
+        <br>
+        <div class="rizhi">
+            <section>
+                <p><b>7.20 Thu.</b><br>
+                    <span id="teshu_p">做完了自我介绍和网络住址，
+                    写完这篇日志就可以做页尾了，还想添加一点其他的内容，
+                    可是不知道添加什么，就这样吧，开始做页尾。</span>
+                </p>
+            </section>
+        </div>
+        <br>
+        <div class="footer">
+            2023
+        </div>
+    </div>
+</body>
+</html>

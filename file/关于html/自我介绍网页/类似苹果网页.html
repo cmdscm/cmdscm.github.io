@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聪明的sc猫的网站</title>
+    <style>
+        /* CSS样式 */
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 25px;
+            top: 0;
+            left: 0;
+            position: fixed;
+            width: 100%;
+        }
+        
+        nav {
+            text-align: center;
+            margin-top: 5px;
+            margin-left: 20px;
+        }
+        
+        nav a{
+            color: #fff;
+            text-decoration: none;
+            margin:25px;
+        }
+        
+        section {
+            padding: 10px;
+            height: 100%;
+            text-align: center;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* 自定义样式 */
+        .about-section {
+                        background-size: cover;
+            background-position: center;
+            padding: 10%;
+            height: 100%;
+            text-align: center;
+            color: #000000;
+            background-color: #f5f5f5;
+        }
+        
+        .about-section h2 {
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+
+        .about-section p {
+            font-size: 18px;
+            line-height: 30px;
+        }
+
+        .empty-section {
+            padding: 150px;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+        
+        .empty-section h2 {
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+
+        .empty-section p {
+            font-size: 18px;
+            color: #777;
+        }
+        .block {
+            border:5px outset black;
+            margin-bottom: 40px;
+            padding: 10px;
+        }
+        .tou {
+            background-color: #555;
+            font-size: 50px;
+            font-style: unset;
+            color: #f5f5f5;
+        }
+        .ti {
+        font-size: 30px; 
+        cursor: pointer;
+        color:white;  
+        transition: transfrom 0.3s,color 0.3s;  
+        }
+        body{
+            background-color: #39373726;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <br>
+        <!-- 导航栏 -->
+        <nav>
+            <a  class="ti" onclick="location.href='#welcome'">我的主页</a>&nbsp
+            <a  class="ti" onclick="location.href='#kuai3'">网络住址</a>&nbsp
+            <a  class="ti" onclick="location.href='#kuai1'">关于我的</a>&nbsp
+            <a  class="ti" onclick="location.href='#kuai2'">我的荣誉</a>&nbsp
+        </nav>
+        <br>
+    </header>
+<div class="tou">
+    <section id="welcome">
+        <!-- 页面内容 -->
+    <br>
+        <h1><strong>Welcome</strong></h1>
+        <br>
+        <p>&nbsp欢迎来到聪明的sc猫的网站!&nbsp
+        </p>
+        <br>
+    </section>
+</div>
+<br>
+<br>
+<div class="block">
+    <section class="about-section" id="kuai1">
+        <!-- 自我介绍板块 -->
+        <h2><strong>关于我的</strong>
+        </h2>
+        <p>聪明的sc猫,原名为gong yu qian.目前还只是一个5年级小学生。
+现居江西新余,接触过python、scratch、html、logoup3d等编程语言,但最喜欢scratch.</p>
+    </section>
+</div>
+<div class="block">
+    <section class="empty-section" id="kuai2">
+        <!-- 空板块示例 1 -->
+        
+        <h2><strong>我的荣誉</strong></h2>
+          <p>获得过<div class="rongyu">三好学生</div>
+            我做的scratch作品获得了江西省<div class="rongyu">二等奖</div>
+        参加市举办的logoup比赛得了<div class="rongyu">三等奖</div>
+        </p>
+    <style>
+        .rongyu{
+        color: red;
+        font-size: 20px;
+        }
+    </style>
+    </section>
+</div>
+<div class="block">
+    <section class="empty-section" id="kuai3">
+        <!-- 空板块示例 2 -->
+        <h2><strong>网络住址</strong></h2>
+        <p><table style="text-align: center;" class="zhuzhi">
+        <tr><td>b站</td><td>聪明的电八<button onclick="window.location.href='https://space.bilibili.com/1402300157?spm_id_from=333.1007.0.0'">前往</button></td></tr>
+        <tr><td>scratch中社</td><td>超**的牛马<button onclick="window.location.href='https://www.scratch-cn.cn/user/project?comid=61bd9affa39ecf10547fe6a0'">前往</button></td></tr> 
+        <tr><td>共创世界</td><td>聪明的sc猫
+            <button onclick="window.location.href='https://www.ccw.site/student/62df9aa87c888254d55b6f6a'">前往</button></td></tr>  
+        <tr><td>我的世界</td><td>懒得要告诉你</td></tr>
+        <tr><td>qq</td><td>1348713675</td></tr>      
+        </table></p>
+    </section>
+    <style>
+        .zhuzhi{
+width: 800px;
+margin: 0 auto;
+font-size: 30px;
+        }
+    </style>
+</div>
+<style>
+    #fanhui{
+      position: absolute;
+      right:  50px; 
+      z-index: 99;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  background-color: #0f0e0e;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+    }
+</style>
+<script>
+    var moshi = 1
+    function updateBlocksStyle() {
+      var blocks = document.getElementsByClassName("block");
+      for (var i = 0; i < blocks.length; i++) {
+        var block = blocks[i];
+        if (moshi === 1) {
+          block.style.borderColor = "black";
+          block.style.backgroundColor = "white";
+          block.style.color = "black";
+        } else {
+          block.style.borderColor = "white";
+          block.style.backgroundColor = "black";
+          block.style.color = "white";
+        }
+      }
+    }
+</script>
+    <footer>
+        <!-- 页脚 -->
+        <p>&copy;2023 丨 clever's sc cat
+<button id="fanhui" title="回去了" onclick="location.href='#welcome'">回去</button></p>
+        
+    </footer>
+</body>
+<head>
+<style>
+#scroll-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #555;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#scroll-to-top:hover {
+  background-color: #777;
+}
+</style>
+</head>
+<body>
+
+<!-- 页面内容 -->
+
+<button onclick="scrollToTop()" id="scroll-to-top" title="返回顶部">返回</button>
+
+<script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    // 当页面滚动超过100px时显示按钮
+    var scrollToTopBtn = document.getElementById("scroll-to-top");
+    if (document.body.scrollTop > 1400 || document.documentElement.scrollTop > 1400) {
+        scrollToTopBtn.style.display = "block";
+    } else {
+        scrollToTopBtn.style.display = "none";
+    }
+}
+
+function scrollToTop() {
+    // 平滑滚动到页面顶部
+    document.body.scrollTop = 0; // 兼容旧版浏览器
+    document.documentElement.scrollTop = 0; // 现代浏览器
+}
+</script>
+</body>
+</html>

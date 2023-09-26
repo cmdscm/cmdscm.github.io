@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>提交表单</title>
+    <link rel="stylesheet" href="form-index-styles.css">
+</head>
+<body>
+    <main>
+    
+    <h1 id="title">提交</h1>
+    
+    <p  id="ts-one">提示 : 完成以下填空并点击<b>'提交'</b>按钮即可完成提交</p>
+    <br>
+    <hr>
+    <br>
+    <form id="form" action="https://cmdscm.github.io" method="post">
+        <fieldset class="mokuai">
+            <h2 class="mk-title">个人信息填写</h2>
+            <br>
+            <label class="mk-content" for="name">
+                请输入你的名字：
+                <input class='enter'type="text" id='name' placeholder="enter your name" required>
+            </label>
+            <label class="mk-content" for="phone-number">
+                请输入你的年龄:
+                <input class='enter'type="number" id="phone-number" placeholder="enter your age(1~125)" min="1" max="125"  required>
+            </label>
+            <label class="mk-content" for="email">
+                请输入你的邮箱:
+                <input class='enter' type="email" id="email" placeholder="enter your email" required>
+            </label>
+            <label class="mk-tf" for="boy-girl">
+                请选择你的性别:
+                <select id="boy-girl" >
+                    <option value="">男/boy</option>
+                    <option value="1">女/girl</option>
+                    <option value="2">无/null</option>
+                </select>
+            </label>
+        </fieldset>
+        <br>
+        <fieldset class="mokuai">
+            <h2 class="mk-title">备注信息填写</h2>
+            <br>
+            <p class="tishi">提示:至少要有五个字符</p>
+            <label>
+                <textarea   cols="49" rows="5" placeholder="enter your want" minlength="5">
+</textarea>
+            </label>
+        </fieldset>
+        <br>
+        <fieldset class="mokuai">
+            <h2 class="mk-title">阅读协议填写</h2>
+            <br>
+            <label class="mk-content" for="yuedu">
+                <p class="xy">是否认真阅读协议?</p>
+                <input type="checkbox" value="yes" id="yuedu" class="yuedu" name="yuedu" required> 我已认真阅读<a href="https://cmdscm.github.io">用户协议</a>
+            </label>
+            <label class="mk-content" for="xieyi">
+                <p class='xy'>是否同意这个<a href='https://cmdscm.github.io'>协议</a>?</p>
+                <input type="radio" class="xieyi" name="xieyi" id="xieyi" value="1" required> 我很同意这个协议
+                <input type="radio" class="xieyi" name="xieyi" id="xieyi" value="2" required> 我不同意这个协议
+            </label>
+        </fieldset>
+        <br>
+        <hr>
+        <br>
+        <input id="submit" type="submit" class="submit">
+    </form>
+    </main>
+</body>
+</html>

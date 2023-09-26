@@ -1,0 +1,12 @@
+{
+    "manifest_version": 2,
+    "name": "关键词关闭插件",
+    "version": "1.0",
+    "description": "当打开的网址包含特定关键词时关闭网页并显示提示信息",
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "permissions": ["tabs"]
+  }
+  

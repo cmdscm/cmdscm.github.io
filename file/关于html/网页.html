@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>网页跳转</title>
+</head>
+<body>
+    <h1>请输入网址：</h1>
+    <input id="urlInput" type="text" placeholder="输入网址">
+    <button onclick="jump()">跳转</button>
+
+    <script>
+        function jump() {
+            var url = document.getElementById("urlInput").value;
+            if (url.trim() === "") {
+                alert("请输入网址");
+            } else {
+                window.location.href = url;
+            }
+        }
+    </script>
+</body>
+</html>

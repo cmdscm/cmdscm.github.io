@@ -1,0 +1,106 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>一个介绍页面</title>
+  <link rel="stylesheet" href="styles.css"
+</head>
+<body>
+  <main id="main-doc">
+    <nav id="navbar">
+      <header>
+        这个文档是一个技术文档....？
+      </header>
+      <a class="nav-link" href="#number_one">number one</a>
+      <a class="nav-link" href="#number_two">number two</a>
+      <a class="nav-link" href="#number_three">number three</a>
+      <a class="nav-link" href="#number_four">number four</a>
+      <a class="nav-link" href="#number_five">number five</a>
+    </nav>
+    <section class="main-section" id="number_one">
+      <header>number one</header>
+      <p>大家好，欢迎来到此网页</p>
+      <li>作者的话：1+1不会等于3</li>
+      <p>第一部分到此结束</p>
+      <code>next : number two</code>
+    </section>
+    <section id="number_two" class="main-section">
+      <header>number two</header>
+      <p>这个网页其实就是我为了通过测试而做的一个没有任何有用的东西的网页，如果你不想看了，请离开</p>
+      <li>作者的话：快走开</li>
+      <p>第二部分到此结束</p>
+      <code>next : number three</code>
+    </section>
+    <section class="main-section" id="number_three">
+      <header>number three</header>
+      <p>我来讲个故事吧，从前有座山，山里有座庙，庙里有个小和尚，小和尚说：“从前有座山，山里有座庙......”</p>
+      <li>作者的话：这个故事是不是很有趣</li>
+      <p>第三部分到此结束</p>
+      <code>next : number four</code>
+    </section>
+    <section id="number_four" class="main-section">
+      <header>number four</header>
+      <p>欢迎来到第四部分，下面我说一下我的联系方式</p>
+      <p>QQ:1348713675</p>
+      <li>作者的话：其实我还有其他的联系方式，但是我不想写</li>
+      <p>第四部分到此结束</p>
+      <code>next : number five</code>
+    </section>
+    <section class="main-section" id="number_five">
+      <header>number five</header>
+      <p>这个网页的内容到这里几乎就没有了，如果我想，那我还会继续更新</p>
+      <li>作者的话：再也不更新了</li>
+      <p>第五部分到此结束</p>
+      <code>next : no</code>
+    </section>
+  </main>
+</body>
+</html>
+
+** end of undefined **
+
+** start of undefined **
+
+body{
+  background-color:skyblue;
+  min-width:400px;
+  max-width:600px;
+}
+main{
+  float:right;
+}
+#navbar{
+  float:left;
+  height:100%;
+  width:30%;
+  position:absolute;
+  top:0;
+  left:0;
+}
+section{
+  float:right;
+  position:re
+}
+li{
+  font-weight:bold;
+}
+code{
+  background-color:gray;
+  color:white;
+  font-size:15px;
+}
+p{
+  background-color:white;
+  padding:10px;
+}
+@media(min-width:300px){
+  p{
+    background-color:black;
+    color:white;
+  }
+}
+
+** end of undefined **
+

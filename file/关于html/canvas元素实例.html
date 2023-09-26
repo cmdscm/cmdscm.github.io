@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Canvas 示例</title>
+    <style>
+        #myCanvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        // 绘制矩形
+        ctx.fillStyle = "red";
+        ctx.fillRect(50, 50, 100, 100);
+
+        // 绘制文本
+        ctx.font = "20px Arial";
+        ctx.fillStyle = "blue";
+        ctx.fillText("Hello, World!", 200, 100);
+
+        // 绘制线条
+        ctx.strokeStyle = "green";
+        ctx.lineWidth = 5;
+        ctx.beginPath();
+        ctx.moveTo(250, 200);
+        ctx.lineTo(400, 300);
+        ctx.stroke();
+
+        // 绘制圆形
+        ctx.fillStyle = "yellow";
+        ctx.beginPath();
+        ctx.arc(350, 150, 50, 0, 2 * Math.PI);
+        ctx.fill();
+
+        // 绘制图像
+        var img = new Image();
+        img.src = "我的小站.png";
+        img.onload = function() {
+            ctx.drawImage(img, 200, 300, 500, 100);
+        };
+    </script>
+</body>
+</html>

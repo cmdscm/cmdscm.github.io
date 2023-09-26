@@ -1,0 +1,126 @@
+<html>
+    <title>
+        聪明的sc猫的网页
+    </title>
+    <style>
+        .zhengwen{
+            padding: 0;
+        }
+        p::selection{
+            background-color: yellowgreen;
+            color: yellow;
+            font-size: 30px;
+        }
+        body{
+            background-color: rgb(214, 228, 240);
+        }
+        header{
+            background-color: black;
+            color: white;
+            top: 0;
+            left: 0;
+            width: 100%;
+            align-items: center;
+            animation: headerd 4s ease 4s reverse ;
+            animation-iteration-count: infinite;
+        }
+        @keyframes headerd{
+            0%{background-color: black;}
+            50%{background-color: rgb(214, 228, 240)}
+            100%{background-color: black;}
+        }
+        header p{
+            text-align: center;
+            padding: 20px;
+            font-size: 50px;
+            text-shadow: 2px 2px rgb(119, 151, 255);
+        }
+        .ziliao{
+            padding: 20px;
+            float: left;
+            height: 40%;
+            width: 10%;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 5px 5px 10px rgba(119, 151, 255,10);
+            border-width:10px ;
+            border-color: white;
+        }
+        .zhuwei{
+            padding:20px;
+            float: right;
+            position: absolute;
+            left: 20%;
+            height: 100%;
+            width: 75%;
+            background-color: white;
+            border-radius: 20px ;
+            border-color: white;
+            border-width: 10px;
+            box-shadow: 5px 5px 10px rgba(119, 151, 255,10);
+        }
+        #touxiang img{
+            position: relative;
+            display: block;
+            height: 10vh;
+            width: 10vh;
+            border-radius: 50%  ;
+            border-width: 10px;
+            align-items: center;
+            left: 25%;
+            
+        }
+        #touxiang:hover{
+            transform: scale(1.5);
+            top: 20px;
+
+        }
+        .name{
+            text-align: center;
+        }
+        hr{
+            color: skyblue;
+            width: 90%;
+        }
+        table{
+            align-items: center;
+        }
+        .dizhi {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+            
+    </style>
+    <head>
+        <header>
+            <p>
+                Welcome
+            </p>
+        </header>
+    </head>
+    <div class="zhengwen"> 
+        <div class="zhuwei">
+            
+        </div>
+            <div class="ziliao">
+                <span id="touxiang">
+                    <img src="图片1.jpg" alt="我的头像">
+                </span>
+                <p class="name">
+                    懒得要告诉你
+                </p>
+                    <hr>
+                <div class="dizhi">
+                    <table>
+                    <tr>
+                    <td>bi</td>
+                    <td>qq</td>
+                    <td>gi</td>
+                    </table>
+                </div>
+            </div>
+        
+    </div>
+    
+</html>
