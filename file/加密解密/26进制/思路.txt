@@ -1,0 +1,21 @@
+l = XXX
+基于 text
+text == 8-0-4
+for i in text
+    如果 number
+        如果 l 不是 XXX
+            代表l = a-z
+            l = l + ndict[number]
+        如果 l 是 XXX
+            代表 l != a-z
+            l = ndict[number]
+    如果 -
+        如果 l = XXX
+            代表现在不需要写入
+        如果 l != XXX
+            代表 l = a-z
+            代表 l 一i经完成
+            otext = otext + l
+            l = XXX
+            代表初始化
+输出 otext
