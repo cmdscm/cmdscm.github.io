@@ -1,0 +1,96 @@
+/* 初始化 */
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+:root{
+    --search-minheight:11vh;
+}
+/* 背景 */
+body{
+    background-color: rgb(232, 230, 230);
+}
+/* 内容区域 */
+main{
+    width: 70vw;
+    min-height: 100vh;
+    margin-left: 15vw;
+    padding-top: 5vh;
+}
+/* 模块定义 */
+section{
+    width: 100%;
+    border-radius: 2px;
+}
+legend{
+    display: none;
+}
+/* 搜索部分 */
+#search{
+    background: whitesmoke;
+    border: 2px rgb(201, 201, 201) solid;
+    padding: 5px;
+    min-height: auto;
+    height: 10vh;
+    max-height: var(--search-minheight);
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+}
+#search form{
+    margin-left: 1vw;
+    margin-right: 1vw;
+    height: 8vh;
+    max-height: calc(var(--search-height) - 10px);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+#search button{
+    height: 9.5vh;
+    background-color: greenyellow;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: .2vw;
+    color: whitesmoke;
+    background-color: blue;
+}
+#search button:hover{
+    background-color: #4e6ef2;
+}
+#search-img{
+    height: 9vh;
+}
+#search input[type='submit']{
+    height: 9vh;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: blue;
+    color: white;
+    letter-spacing: .2vw;
+    font-size: larger;
+    margin: 0;
+    height: 100%;
+}
+#search input[type='text']{
+    height: 9vh;
+    margin-right: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+/* 不同搜索引擎时不同样式 */
+#search.search-bd button,#search.search-bd input#search-submit{
+    border: 2px #4e6ef2 solid;
+    background-color: #4e6ef2;
+}
+#search.search-bd input{
+    border: 2px #4e6ef2 solid;
+}
+#search.search-ts button,#search.search-ts input#search-submit{
+    border: 2px #00ce41 solid;
+    background-color: #00ce41;
+}
+#search.search-ts input{
+    border: 2px #00ce41 solid;
+}
+
+
