@@ -20,17 +20,18 @@ main{
 }
 /* 模块定义 */
 section{
-    width: 100%;
+    width: 70vw;
     border-radius: 2px;
+    background: whitesmoke;
+    border: 2px rgb(201, 201, 201) solid;
+    padding: 5px;
 }
 legend{
     display: none;
 }
 /* 搜索部分 */
 #search{
-    background: whitesmoke;
-    border: 2px rgb(201, 201, 201) solid;
-    padding: 5px;
+    
     min-height: auto;
     height: 10vh;
     max-height: var(--search-minheight);
@@ -70,12 +71,20 @@ legend{
     font-size: larger;
     margin: 0;
     height: 100%;
+    cursor: pointer;
 }
 #search input[type='text']{
     height: 9vh;
     margin-right: 0;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
+    font-size: xx-large;
+    font-weight: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT','Trebuchet MS', sans-serif;
+}
+#search-input:focus{
+    background-color: white;
+    border: green;
 }
 /* 不同搜索引擎时不同样式 */
 #search.search-bd button,#search.search-bd input#search-submit{
@@ -85,6 +94,9 @@ legend{
 #search.search-bd input{
     border: 2px #4e6ef2 solid;
 }
+#search.search-bd #search-input{
+    color: #4e6ef2;
+}
 #search.search-ts button,#search.search-ts input#search-submit{
     border: 2px #00ce41 solid;
     background-color: #00ce41;
@@ -92,5 +104,70 @@ legend{
 #search.search-ts input{
     border: 2px #00ce41 solid;
 }
+#search.search-ts #search-input{
+    color: #00ce41;
+}
+/* 快捷网址模块 */
+#address{
+    height: auto;
+    margin-top: 5vh;
+    min-height: 20vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+#address a{
+    height: 9vh;
+    border: gray 2px solid;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    color: gray;
+    opacity: .8;
+}
+#address a:hover{
+    transition: .5s;
+    opacity: 1;
+    border: black 2px solid;
+    color: black;
+    background-color: white;
+}
+#address a:nth-child(1):hover{
+    border: indianred 2px solid;
+    background-color: pink;
+    color: indianred;
+}
+#address a:nth-child(2):hover{
+    opacity: 1;
+    border: orangered 2px solid;
+    background-color: orange;
+    color: orangered;
+}
+#address a:nth-child(3):hover{
+    opacity: 1;
+    border: aqua 2px solid;
+    background-color: black;
+    color: white;
+}
+#address a:nth-child(4):hover{
+    opacity: 1;
+    border: red 2px solid;
+    background-color: white;
+    color: orangered;
+}
+#address a:nth-child(5):hover{
+    opacity: 1;
+    border: skyblue 2px solid;
+    background-color: white;
+    color: skyblue;
+}
+#address a:nth-child(6):hover{
+    opacity: 1;
+    border: green 2px solid;
+    background-color: rgb(195, 250, 113);
+    color: green;
+}
+
 
 
