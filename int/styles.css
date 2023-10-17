@@ -168,6 +168,15 @@ legend{
     background-color: rgb(195, 250, 113);
     color: green;
 }
-
-
-
+footer{
+    width:100%;
+    height: 15vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer p{
+    color: white;
+    font-size: x-large;
+}
