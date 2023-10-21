@@ -10,18 +10,79 @@
 /* 背景 */
 body{
     background-color: rgb(232, 230, 230);
-    min-width: 800px;
+    min-width: calc(800px + 15vw);
 }
-/* 内容区域 */
+/* 弹窗 */
+#leftside{
+    width: 15vw;
+    height: 30vh;
+    min-height: auto;
+    position: fixed;
+    border:rgb(201, 201, 201) solid 2px;
+    background-color:whitesmoke;
+    margin-left: 2vw;
+    margin-top: 20vh;
+    border-radius: 10px;
+    box-shadow: 3px 3px 20px 5px skyblue;
+    display: inherit;
+}
+#leftside a{
+    width: 10vw;
+    height: 6vh;
+    background-color:skyblue; 
+    color: white;
+    margin-top: 1vh;
+    margin-left: 2.5vw;
+    border: 2px #4e6ef2 solid;
+    border-radius: 10px;
+    padding: 2px;
+    display: block;
+    overflow: hidden;
+}
+#leftside a p{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 110%;
+}
+#leftside a p:hover{
+    font-size: 120%;
+    background-color: blue;
+}
+#leftside img{
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    border: rgb(201, 201, 201) solid 2px;
+    margin-left: calc((100% / 2) - (5vw / 2));
+    transform: translateY(-2vh);
+    transition: .5s;
+}
+#leftside img:hover{
+    transform:scale(110%);
+    margin-bottom: 1vh;
+    border-radius: 20%;
+}
+@media (max-width:1000px) {
+    #leftside{
+        display: none;
+    }
+    main{
+        margin-left: 15vw;
+    }
+}
+/* 主内容区域 */
 main{
     width: 70vw;
-    min-width:calc(800px - 15vw);
+    min-width:calc(800px - 18vw);
     min-height: 100vh;
-    margin-left: 15vw;
+    margin-left: 19vw;
     padding-top: 5vh;
 }
 main section{
-    min-width:calc(800px - 15vw);
+    min-width:calc(800px - 18vw);
 }
 /* 模块定义 */
 section{
