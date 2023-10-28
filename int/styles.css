@@ -4,13 +4,9 @@
     margin: 0;
     text-decoration: none;
 }
-:root{
-    --search-minheight:11vh;
-}
 /* 背景 */
 body{
     background-color: rgb(232, 230, 230);
-    min-width: calc(800px + 15vw);
 }
 /* 弹窗 */
 #leftside{
@@ -70,21 +66,19 @@ body{
     #leftside{display: none;}
 }
 @media (max-height:600px){
-    #leftside img{display: none;}
+    #leftside img{transform:translateY(-1vh);}
 }
 /* 主内容区域 */
 main{
     width: 70vw;
-    min-width:calc(800px - 18vw);
     min-height: 100vh;
     margin-left: 19vw;
     padding-top: 5vh;
 }
 /* 模块定义 */
 section{
-    min-width:calc(800px - 18vw);
     width: 70vw;
-    border-radius: 2px;
+    border-radius: 10px;
     background: whitesmoke;
     border: 2px rgb(201, 201, 201) solid;
     padding: 5px;
@@ -94,20 +88,19 @@ legend{
 }
 /* 搜索部分 */
 #search{
-    min-height: auto;
-    height: 10vh;
-    max-height: var(--search-minheight);
-    display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
+    min-height: 10vh;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
     overflow: hidden;
 }
 #search form{
+    display: flex;
     margin-left: 1vw;
     margin-right: 1vw;
     height: 8vh;
     max-height: calc(var(--search-height) - 10px);
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    flex-wrap: wrap;
 }
 #search button{
     height: 9.5vh;
@@ -211,11 +204,14 @@ legend{
 }
 /* 快捷网址模块 */
 #address{
-    height: auto;
     margin-top: 5vh;
     min-height: 20vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: stretch;
 }
 #address a{
     height: 9vh;
@@ -227,13 +223,20 @@ legend{
     font-size: x-large;
     color: gray;
     opacity: .8;
-}
-#address a:hover{
+    min-width: 20vw;
+    max-width: 20vw;
+    flex-basis: 0;
+    flex: 0 0 0;
+    overflow: hidden;
     transition: .5s;
+}
+/* 悬浮样式 */
+#address a:hover{
     opacity: 1;
     border: black 2px solid;
     color: black;
     background-color: white;
+    border-radius: 10px;
 }
 #address a:nth-child(1):hover{
     border: indianred 2px solid;
@@ -270,17 +273,62 @@ legend{
     background-color: rgb(195, 250, 113);
     color: green;
 }
+/* 百度专栏 */
+#bd-sec{
+    display: flex;
+    flex-direction: row;
+    justify-content:start;
+    align-items:stretch;
+    flex-wrap: wrap;
+    align-content: stretch;
+}
+#bd-sec a{
+    height: 9vh;
+    border: gray 2px solid;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    color: gray;
+    opacity: .8;
+    min-width: 10vw;
+    flex-basis: 0;
+    overflow: hidden;
+    transition: .5s;
+}
+#bd-sec a:hover{
+    opacity: 1;
+    border: #4e6ef2 2px solid;
+    color: #4e6ef2;
+    background-color: white;
+    border-radius: 10px;
+}
 /* 页尾 */
 footer{
     margin-top: 5vh;
     width:100%;
     height: 15vh;
     background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
 }
-footer p{
+footer *{
     color: white;
-    font-size: x-large;
 }
+footer #banben{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+footer a:hover{
+    text-decoration: underline;
+}
+footer h2{
+    width: 100%;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    text-align: center;
+}
+
+
+
