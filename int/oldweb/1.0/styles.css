@@ -1,0 +1,286 @@
+/* 初始化 */
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+:root{
+    --search-minheight:11vh;
+}
+/* 背景 */
+body{
+    background-color: rgb(232, 230, 230);
+    min-width: calc(800px + 15vw);
+}
+/* 弹窗 */
+#leftside{
+    width: 15vw;
+    height: 30vh;
+    min-height: auto;
+    position: fixed;
+    border:rgb(201, 201, 201) solid 2px;
+    background-color:whitesmoke;
+    margin-left: 2vw;
+    margin-top: 20vh;
+    border-radius: 10px;
+    box-shadow: 3px 3px 20px 5px skyblue;
+    display: inherit;
+}
+#leftside a{
+    width: 10vw;
+    height: 6vh;
+    background-color:skyblue; 
+    color: white;
+    margin-top: 1vh;
+    margin-left: 2.5vw;
+    border: 2px #4e6ef2 solid;
+    border-radius: 10px;
+    padding: 2px;
+    display: block;
+    overflow: hidden;
+}
+#leftside a p,#aboutme a p{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 110%;
+    transition: .5s;
+}
+#leftside a p:hover,#aboutme a p:hover{
+    font-size: 120%;
+    color: blue;
+}
+#leftside img{
+    width: 5vw;
+    height: 5vw;
+    border-radius: 50%;
+    border: rgb(201, 201, 201) solid 2px;
+    margin-left: calc((100% / 2) - (5vw / 2));
+    transform: translateY(-2vh);
+    transition: .5s;
+}
+#leftside img:hover{
+    transform:scale(110%);
+    margin-bottom: 1vh;
+    border-radius: 20%;
+} 
+@media (max-width:1000px) {
+    #leftside{display: none;}
+}
+@media (max-height:600px){
+    #leftside img{display: none;}
+}
+/* 主内容区域 */
+main{
+    width: 70vw;
+    min-width:calc(800px - 18vw);
+    min-height: 100vh;
+    margin-left: 19vw;
+    padding-top: 5vh;
+}
+/* 模块定义 */
+section{
+    min-width:calc(800px - 18vw);
+    width: 70vw;
+    border-radius: 2px;
+    background: whitesmoke;
+    border: 2px rgb(201, 201, 201) solid;
+    padding: 5px;
+}
+legend{
+    display: none;
+}
+/* 搜索部分 */
+#search{
+    min-height: auto;
+    height: 10vh;
+    max-height: var(--search-minheight);
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    overflow: hidden;
+}
+#search form{
+    margin-left: 1vw;
+    margin-right: 1vw;
+    height: 8vh;
+    max-height: calc(var(--search-height) - 10px);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+#search button{
+    height: 9.5vh;
+    background-color: greenyellow;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: .2vw;
+    color: whitesmoke;
+    background-color: blue;
+}
+#search button:hover{
+    background-color: #4e6ef2;
+}
+#search-img{
+    height: 9vh;
+}
+#search input[type='submit']{
+    height: 9vh;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: blue;
+    color: white;
+    letter-spacing: .2vw;
+    font-size: larger;
+    margin: 0;
+    height: 100%;
+    cursor: pointer;
+}
+#search input[type='text']{
+    height: 9vh;
+    margin-right: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-size: xx-large;
+    font-weight: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT','Trebuchet MS', sans-serif;
+}
+#search-input:focus{
+    background-color: white;
+    border: green;
+}
+/* 不同搜索引擎时不同样式 */
+#search.search-bd button,#search.search-bd input#search-submit{
+    border: 2px #4e6ef2 solid;
+    background-color: #4e6ef2;
+}
+#search.search-bd input{
+    border: 2px #4e6ef2 solid;
+}
+#search.search-bd #search-input{
+    color: #4e6ef2;
+}
+#search.search-ts button,#search.search-ts input#search-submit{
+    border: 2px #00ce41 solid;
+    background-color: #00ce41;
+}
+#search.search-ts input{
+    border: 2px #00ce41 solid;
+}
+#search.search-ts #search-input{
+    color: #00ce41;
+}
+/* 自适应 */
+@media (max-width:1000px) {
+    #search img{display: none;}
+}
+/* 关于作者模块 */
+#aboutme{
+    margin-top: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#aboutme img{
+    width: 6vw;
+    height: 6vw;
+    display: inline-block;
+    border: rgb(201, 201, 201) 2px solid;
+    border-radius: 50%;
+    transform: translateX(-5vw);
+    transition: .5s;
+    min-width: 50px;
+    min-height: 50px;
+}
+#aboutme img:hover{
+    border-radius: 20%;
+}
+#aboutme a{
+    min-width: 150px;
+    width: 10vw;
+    height: 10vh;
+    display: inline-block;
+    background-color: skyblue;
+    color: white;
+    margin-left: 2vw;
+    border: 2px blue solid;
+    border-radius: 10px;
+}
+@media (min-width:1000px) {
+    #aboutme{display: none;}
+}
+/* 快捷网址模块 */
+#address{
+    height: auto;
+    margin-top: 5vh;
+    min-height: 20vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+#address a{
+    height: 9vh;
+    border: gray 2px solid;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    color: gray;
+    opacity: .8;
+}
+#address a:hover{
+    transition: .5s;
+    opacity: 1;
+    border: black 2px solid;
+    color: black;
+    background-color: white;
+}
+#address a:nth-child(1):hover{
+    border: indianred 2px solid;
+    background-color: pink;
+    color: indianred;
+}
+#address a:nth-child(2):hover{
+    opacity: 1;
+    border: orangered 2px solid;
+    background-color: orange;
+    color: orangered;
+}
+#address a:nth-child(3):hover{
+    opacity: 1;
+    border: aqua 2px solid;
+    background-color: black;
+    color: white;
+}
+#address a:nth-child(4):hover{
+    opacity: 1;
+    border: red 2px solid;
+    background-color: white;
+    color: orangered;
+}
+#address a:nth-child(5):hover{
+    opacity: 1;
+    border: skyblue 2px solid;
+    background-color: white;
+    color: skyblue;
+}
+#address a:nth-child(6):hover{
+    opacity: 1;
+    border: green 2px solid;
+    background-color: rgb(195, 250, 113);
+    color: green;
+}
+/* 页尾 */
+footer{
+    margin-top: 5vh;
+    width:100%;
+    height: 15vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer p{
+    color: white;
+    font-size: x-large;
+}
