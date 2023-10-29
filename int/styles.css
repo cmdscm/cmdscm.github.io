@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     text-decoration: none;
+    box-sizing: border-box;
 }
 /* 背景 */
 body{
@@ -93,17 +94,17 @@ legend{
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
+    justify-content: center;
 }
 #search form{
     display: flex;
     margin-left: 1vw;
     margin-right: 1vw;
-    height: 8vh;
-    max-height: calc(var(--search-height) - 10px);
+    height: 10vh;
     flex-wrap: wrap;
 }
 #search button{
-    height: 9.5vh;
+    height: 10vh;
     background-color: greenyellow;
     border: none;
     border-radius: 5px;
@@ -118,7 +119,7 @@ legend{
     height: 9vh;
 }
 #search input[type='submit']{
-    height: 9vh;
+    height: 100%;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
     background-color: blue;
@@ -126,11 +127,10 @@ legend{
     letter-spacing: .2vw;
     font-size: larger;
     margin: 0;
-    height: 100%;
     cursor: pointer;
 }
 #search input[type='text']{
-    height: 9vh;
+    height: 100%;
     margin-right: 0;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -275,13 +275,14 @@ legend{
 }
 /* 百度专栏 */
 #bd-sec{
+    margin-top: 5vh;
     display: flex;
     flex-direction: row;
-    justify-content:start;
-    align-items:stretch;
     flex-wrap: wrap;
-    align-content: stretch;
+    justify-content: space-around;
 }
+/* #bd-sec a:nth-child(n+7){
+} */
 #bd-sec a{
     height: 9vh;
     border: gray 2px solid;
@@ -292,7 +293,7 @@ legend{
     font-size: x-large;
     color: gray;
     opacity: .8;
-    min-width: 10vw;
+    min-width: 20vw;
     flex-basis: 0;
     overflow: hidden;
     transition: .5s;
