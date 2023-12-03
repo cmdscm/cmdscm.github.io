@@ -1,96 +1,107 @@
 <!DOCTYPE html>
-<!-- 设置 -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>我的网站</title>
+    <title>个人网页</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
-<!-- 网页内容 -->
 <body>
-    <!-- 导航栏 -->
     <header>
-        <!-- logo -->
-        <h1>G</h1>
-        <!-- 链接 -->
+        <a href="https://cmdscm.github.io">
+        <canvas id="header-logo"></canvas>
+        </a>
+        <script src="./js/canvas.js"></script>
         <nav>
-            <a href="#jianjie-div">个人简介</a>
-            <a href="#zhanghao-div">我的账号</a>
-            <a href="#rizhi-div">一篇日志</a>
+            <a href="#profile-section">个人简介</a>
+            <a href="#username-section">我的账号</a>
+            <a href="#rizhi-section">更新记录</a>
+            <a href="https://cmdscm.github.io/form">填写问卷</a>
         </nav>
     </header>
-    <main>
-        <!-- 铺垫导航栏 -->
-        <div class="space" id="welcome-div"></div>
-        <!-- 欢迎板块 -->
-        <section class="bankuai" id="welcome-section">
-            <h1 class="welcome_h1">WELCOME</h1>
+    <!-- <div id="backblock"><p>返回</p></div> -->
+    <script src="./js/main.js"></script>
+    <div id="body-main">
+        <section id="welcome-section" class="mokuai" onclick="welcomeSectionClick()">
+            <h1 id="welcome-section-h1">WELCOME</h1>
         </section>
-        <!-- 板块过渡 -->
-        <div class="space" id="jianjie-div"></div>
-        <!-- 个人简介 -->
-        <section class="bankuai" id="jianjie">
-            <!-- 标题 -->
-            <h2 class="bk-title">个人简介</h2>
-            <!-- 正文 -->
-            <p class="bk-one-content">男,小学六年级,
-喜欢玩我的世界,正在学python、scratch、HTML和JS,
-还是一名UP主。<b>——23/09/02</b>
-</p>
-        </section>
-        <!-- 板块过渡 -->
-        <div class="space" id="zhanghao-div"></div>
-        <!-- 我的账号 -->
-        <section class="bankuai" id="zhanghao">
-            <h2 class="bk-title">我的账号</h2>
-            <div class="zhanghao-content-border">
-                <div class="zhanghao-content" id="bili">
-                    <img src="b站头像.jpg" title="b站头像" alt="我的b站头像">
-                    <h3>B站</h3>
-                    <a class="zhanghao-content-a" id="bili-a" target="_blank" href="https://space.bilibili.com/1402300157">前往</a>
-                </div>
-                <div class="zhanghao-content" id="gongchuang">
-                    <img src="共创头像.jpg" title="共创头像" alt="我的共创头像">
-                    <h3>共创</h3>
-                    <a class="zhanghao-content-a" id="gongchuang-a" target="_blank" href="https://www.ccw.site/student/62df9aa87c888254d55b6f6a">前往</a>
-                </div>
-                <div class="zhanghao-content" id="github">
-                    <img src="https://avatars.githubusercontent.com/u/134817738?s=400&v=4" title="Github头像" alt="我的Github头像">
-                    <h3>Github</h3>
-                    <a class="zhanghao-content-a" id="Github-a" target="_blank" href="https://github.com/cmdscm">前往</a>
-                </div>
-                <div class="zhanghao-content" id="freecodecamp">
-                    <img src="https://cmdscm.github.io/qqimg.jpg" title="freecodecamp头像" alt="我的freecodecamp头像">
-                    <h3>freeCodeCamp</h3>
-                    <a class='zhanghao-content-a' id="freecodecamp-a" target="_blank" href="https://www.freecodecamp.org/clever-sc-cat">前往</a>
-                </div>
+        <section class="mokuai" id="profile-section">
+            <div id="profile-section-title"><p>个<br>人<br>简<br>介</p></div>
+            <div id="profile-section-air"></div>
+            <div id="profile-text">
+                <table>
+                    <tr><th>性别:</th><td>男</td></tr>
+                    <tr><th>年龄:</th><td>12</td></tr>
+                    <tr><th>特长:</th><td>编程、下五子棋</td></tr>
+                    <tr><th>在学:</th><td>PYTHON、HTML</td></tr>
+                </table>
             </div>
         </section>
-        <!-- 过渡 -->
-        <div class="space" id="rizhi-div"></div>
-        <!-- 日志 -->
-        <section class="bankuai" id="rizhi">
-            <h2 class="bk-title">一篇日志</h2>
-            <div class="rizhi-content-border">
-            <div class="rizhi-content">23/04/29 网页1.0制作完成</div>
-            <div class="rizhi-content">23/05/17 网页2.0制作完成</div>
-            <div class="rizhi-content">23/07/02 网页新增日志模块</div>
-            <div class="rizhi-content">23/09/05 网页3.0制作完成</div>
-            <div class="rizhi-content">xx/xx/xx . . .</div>
+        <section class="mokuai" id="username-section">
+            <a class="user-card" id="user-card-one" 
+            target="_blank" href="https://space.bilibili.com/1402300157">
+                <img src="./b站头像.jpg" alt="B站头像">
+                <p>B站</p>
+            </a>
+            <a class="user-card" id="user-card-two"
+            target="_blank" href="https://www.ccw.site/student/62df9aa87c888254d55b6f6a">
+                <img src="./共创头像.jpg" alt="B站头像">
+                <p>共创世界</p>
+            </a>
+            <a class="user-card" id="user-card-thr"
+            target="_blank" href="https://github.com/cmdscm">
+                <img src="https://avatars.githubusercontent.com/u/134817738?s=400&v=4" alt="B站头像">
+                <p>Github</p>
+            </a>
+            <a class="user-card" id="user-card-fou" 
+            target="_blank" href="https://www.freecodecamp.org/clever-sc-cat">
+                <img src="https://cmdscm.github.io/qqimg.jpg" alt="B站头像">
+                <p>free Code Camp</p>
+            </a>
+            <a class="user-card user-card-other" id="">
+                <h2>敬请期待</h2>
+            </a>
+            <a class="user-card user-card-other" id="">
+                <h2>敬请期待</h2>
+            </a>
+        </section>
+        <section class="mokuai" id="rizhi-section">
+            <div class="rizhi-card" id="rizhi-zero">
+                <h1>1.0</h1>
+                <p>诞生于23/02/11</p>
+            </div>
+            <div class="rizhi-card" id="rizhi-first">
+                <h1>2.0</h1>
+                <p>完成于23/04/29</p>
+            </div>
+            <div class="rizhi-card" id="rizhi-second">
+                <h1>3.0</h1>
+                <p>完成于23/05/17</p>
+            </div>
+            <div class="rizhi-card" id="rizhi-third">
+                <h1>4.0</h1>
+                <p>完成于23/09/05</p>
+            </div>
+            <div class="rizhi-card" id="rizhi-fourth">
+                <h1>5.0</h1>
+                <p>完成于23/12/04</p>
             </div>
         </section>
-    </main>
-    <!-- 页尾 -->
+    </div>
     <footer>
-    <!-- 提示词 -->
-        <p class="footer-title">已经到底部了</p>
-        <hr>
-        <!-- 页尾内容 -->
-        <a href="https://code.visualstudio.com/Download" target="_blank">点我去官网下载vscode</a>
-        <a href="https://getmc.zip" target="_blank" >点我下载我的世界1.20模组</a>
-        <a href="https://ltcat.lanzoum.com/ioxfy164k5if" target="_blank">点我下载pcl启动器</a>
+        <div id="footbtn">
+            <a href="https://code.visualstudio.com/Download" target="_blank">
+                <p>下载Vscode</p>
+            </a>
+            <a href="https://getmc.zip" target="_blank">
+                <p>下载我的世界1.20模组</p>
+            </a>
+            <a href="https://ltcat.lanzoum.com/ioxfy164k5if" target="_blank">
+                <p>下载PCL</p>
+            </a>
+        </div>
+        <p id="banben">5.0/正式</p>
     </footer>
 </body>
 </html>
