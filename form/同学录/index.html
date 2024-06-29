@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>= 同学录 =</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+<body>
+    <script>
+        function inputCheck(id){
+            now = document.getElementById(id).style.display
+            if (now == 'none'){
+                document.getElementById(id).style.display = 'block'
+            } else {
+                document.getElementById(id).style.display = 'none'
+            }
+        };
+    </script>
+    <form action="https://cmdscm.github.io" method="get" name="index" id="form">
+        <div class="form">
+            <div class="form-input-item form-input-text">
+                <input id="name" type="text" minlength="1" maxlength="4" required>
+                <span class="bar"></span>
+                <label for="name">你的姓名</label>
+            </div>
+            <div class="form-input-item form-input-num">
+                <input id="age" type="number" min="1" max="100" required>
+                <span class="bar"></span>
+                <label for="age">你的年龄</label>
+            </div>
+            <div class="form-input-item form-input-text">
+                <input id="xinzuo" type="text" minlength="1" maxlength="3" required>
+                <span class="bar"></span>
+                <label for="xinzuo">你的星座</label>
+            </div>
+            <div class="form-input-item form-input-text">
+                <input id="sx" type="text" minlength="1" maxlength="2" required>
+                <span class="bar"></span>
+                <label for="sx">你的生肖</label>
+            </div>
+            <div class="form-input-item form-input-select">
+                <div class="input-select-title">我们的关系</div>
+                <label>
+                    <input type="radio" name="1" required checked>
+                    <p>同学</p>
+                </label>
+                <label>
+                    <input type="radio" name="1" required>
+                    <p>朋友</p>
+                </label>
+                <label>
+                    <input type="radio" name="1" required>
+                    <p>不熟</p>
+                </label>
+            </div>
+        </div>
+        <div class="form">
+            <div class="form-input-item form-input-select">
+                <div class="input-select-title">请选择你能联系的方式/多选</div>
+                <label>
+                    <input type="checkbox" name="tl" onclick="inputCheck(name)">
+                    <p>电话</p>
+                </label>
+                <label>
+                    <input type="checkbox" name="qq" onclick="inputCheck(name)">
+                    <p>Q Q</p>
+                </label>
+                <label>
+                    <input type="checkbox" name="wx" onclick="inputCheck(name)">
+                    <p>微信</p>
+                </label>
+                <label>
+                    <input type="checkbox" name="wb" onclick="inputCheck(name)">
+                    <p>微博</p>
+                </label>
+                <label>
+                    <input type="checkbox" name="dy" onclick="inputCheck(name)">
+                    <p>抖音</p>
+                </label>
+                <label>
+                    <input type="checkbox" name="ks" onclick="inputCheck(name)">
+                    <p>快手</p>
+                </label>
+                <label>
+                    <input type="checkbox" name="bl" onclick="inputCheck(name)">
+                    <p>B 站</p>
+                </label>
+                <label>
+                    <input type="checkbox" name="em" onclick="inputCheck(name)">
+                    <p>邮箱</p>
+                </label>
+            </div>
+            <div class="form-input-item form-input-text"style="display: none;"id='tl'>
+                <input id="telephone" type="text" minlength="1" maxlength="14" required>
+                <span class="bar"></span>
+                <label for="telephone">你的电话</label>
+            </div>
+            <div class="form-input-item form-input-text"style="display: none;"id='qq'>
+                <input id="qq" type="text" minlength="1" maxlength="10" required>
+                <span class="bar"></span>
+                <label for="qq">你的QQ号</label>
+            </div>
+            <div class="form-input-item form-input-text"style="display: none;"id='wx'>
+                <input id="wechat" type="text" minlength="1" required>
+                <span class="bar"></span>
+                <label for="wechat">你的微信</label>
+            </div>
+            <div class="form-input-item form-input-text"style="display: none;"id='wb'>
+                <input id="weibo" type="text" minlength="1" required>
+                <span class="bar"></span>
+                <label for="weibo">你的微博</label>
+            </div>
+            <div class="form-input-item form-input-text"style="display: none;"id='dy'>
+                <input id="tiktok" type="text" minlength="1" required>
+                <span class="bar"></span>
+                <label for="tiktok">你的抖音号</label>
+            </div>
+            <div class="form-input-item form-input-text"style="display: none;"id='ks'>
+                <input id="ks" type="text" minlength="1" required>
+                <span class="bar"></span>
+                <label for="ks">你的快手</label>
+            </div>
+            <div class="form-input-item form-input-text"style="display: none;"id='bl'>
+                <input id="bilibili" type="text" minlength="1" required>
+                <span class="bar"></span>
+                <label for="bilibili">你的B站UID</label>
+            </div>
+            <div class="form-input-item form-input-text"style="display: none;"id='em'>
+                <input id="email" type="text" minlength="1" required>
+                <span class="bar"></span>
+                <label for="email">你的邮箱</label>
+            </div>
+            <div class="form-input-item form-input-select">
+                <div class="input-select-title">请选择你玩的游戏</div>
+                <label>
+                    <input type="checkbox" name="mc" onclick="inputCheck(name)">
+                    <p>我的世界</p>
+                </label>
+                <label>
+                    <input type="checkbox" name="eg" onclick="inputCheck(name)">
+                    <p>蛋仔派对</p>
+                </label>
+                <label>
+                    <input type="checkbox" name="gm" onclick="inputCheck(name)">
+                    <p>其他游戏</p>
+                </label>
+            </div>
+            <div class="form-input-item form-input-text"style="display: none;"id='mc'>
+                <input id="mc" type="text" minlength="1" required>
+                <span class="bar"></span>
+                <label for="mc">你的 我的世界 账号名</label>
+            </div>
+            <div class="form-input-item form-input-text"style="display: none;"id='eg'>
+                <input id="eggy" type="text" minlength="1" required>
+                <span class="bar"></span>
+                <label for="eggy">你的 蛋仔派对 账号名</label>
+            </div>
+            <div class="form-input-item form-input-text"style="display: none;"id='gm'>
+                <input id="game" type="text" minlength="1" required>
+                <span class="bar"></span>
+                <label for="game">你玩的游戏是?</label>
+            </div>
+            </div>
+        </div>
+        <div class="form">
+            <div class="form-input-item input-textarea">
+                <textarea class="textarea" required></textarea>
+                <p>毕业赠言</p>
+            </div>
+        </div>
+        <button value="提交" id="submit" type="submit"><p>提交</p></button>
+    </form>
+    <footer class="submit-div" id="submit-div">
+        <h1>毕业快乐</h1>
+        <video controls >
+            <source src="./歌声与微笑.mp4" type="video/mp4">
+            您的浏览器不支持 video 标签。
+        </video>
+    </footer>
+</body>
+</html>
