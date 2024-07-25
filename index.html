@@ -1,107 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人网页</title>
-    <link rel="stylesheet" href="./styles.css">
-</head>
-<body>
-    <header>
-        <a href="https://cmdscm.github.io">
-        <canvas id="header-logo"></canvas>
-        </a>
-        <script src="./js/canvas.js"></script>
-        <nav>
-            <a href="#profile-section">个人简介</a>
-            <a href="#username-section">我的账号</a>
-            <a href="#rizhi-section">更新记录</a>
-            <a href="https://cmdscm.github.io/form">填写问卷</a>
-        </nav>
-    </header>
-    <!-- <div id="backblock"><p>返回</p></div> -->
-    <script src="./js/main.js"></script>
-    <div id="body-main">
-        <section id="welcome-section" class="mokuai" onclick="welcomeSectionClick()">
-            <h1 id="welcome-section-h1">WELCOME</h1>
-        </section>
-        <section class="mokuai" id="profile-section">
-            <div id="profile-section-title"><p>个<br>人<br>简<br>介</p></div>
-            <div id="profile-section-air"></div>
-            <div id="profile-text">
-                <table>
-                    <tr><th>性别:</th><td>男</td></tr>
-                    <tr><th>年龄:</th><td>12</td></tr>
-                    <tr><th>特长:</th><td>编程、下五子棋</td></tr>
-                    <tr><th>在学:</th><td>PYTHON、HTML</td></tr>
-                </table>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>个人网站</title>
+        <link rel="stylesheet" href="./styles.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"/>
+        <link rel="stylesheet" href="https://fontawesome.com.cn/fonts/fa5/css/all.css" />
+    </head>
+    <body>
+        <header>    
+            <div id="title">
+                <p id="header-title">Welcome</p>
             </div>
-        </section>
-        <section class="mokuai" id="username-section">
-            <a class="user-card" id="user-card-one" 
-            target="_blank" href="https://space.bilibili.com/1402300157">
-                <img src="./b站头像.jpg" alt="B站头像">
-                <p>B站</p>
-            </a>
-            <a class="user-card" id="user-card-two"
-            target="_blank" href="https://www.ccw.site/student/62df9aa87c888254d55b6f6a">
-                <img src="./共创头像.jpg" alt="B站头像">
-                <p>共创世界</p>
-            </a>
-            <a class="user-card" id="user-card-thr"
-            target="_blank" href="https://github.com/cmdscm">
-                <img src="https://avatars.githubusercontent.com/u/134817738?s=400&v=4" alt="B站头像">
-                <p>Github</p>
-            </a>
-            <a class="user-card" id="user-card-fou" 
-            target="_blank" href="https://www.freecodecamp.org/clever-sc-cat">
-                <img src="https://cmdscm.github.io/qqimg.jpg" alt="B站头像">
-                <p>free Code Camp</p>
-            </a>
-            <a class="user-card user-card-other" id="">
-                <h2>敬请期待</h2>
-            </a>
-            <a class="user-card user-card-other" id="">
-                <h2>敬请期待</h2>
-            </a>
-        </section>
-        <section class="mokuai" id="rizhi-section">
-            <div class="rizhi-card" id="rizhi-zero">
-                <h1>1.0</h1>
-                <p>诞生于23/02/11</p>
+            <nav id="header-nav">
+                <div class="header-a" onclick="recard(event)" >
+                    <p aria-valuetext="1">个人简介</p>
+                </div>
+                <div class="header-a" onclick="recard(event)" >
+                    <p aria-valuetext="2">作品展示</p>
+                </div>
+                <div class="header-a" onclick="recard(event)" >
+                    <p aria-valuetext="3">我的账号</p>
+                </div>
+                <div class="header-a" onclick="recard(event)" >
+                    <p aria-valuetext="4">更新记录</p>
+                </div>
+            </nav>
+        </header>   
+        <main>
+            <section id="profile" class="card">
+                <div class="section">
+                    <h2 class="card-title">
+                        个人简介
+                    </h2>
+                    <div class="profile-card">
+                    </div>
+                </div>
+            </section>
+            <section id="codeshow" class="card">
+                <div class="section">
+                    <h2 class="card-title">
+                        作品展示
+                    </h2>
+                    <h3 class='code-title'>
+                        网页作品
+                    </h3>
+                    <div class="code-card" id="code-link">    
+                        <a href="https://cmdscm.github.io/int" target="_blank">
+                            <p>浏览器初始页</p>
+                        </a>
+                        <a href="https://cmdscm.github.io/form" target="_blank">
+                            <p>提交表单</p>
+                        </a>
+                        <a href="https://cmdscm.github.io" target="_blank">
+                            <p>我的网站</p>
+                        </a>
+                        <a href="https://cmdscm.github.io/form/同学录" target="_blank">
+                            <p>同学录</p>
+                        </a>
+                    </div>
+                    <h3 class='code-title'>
+                        PYTHON作品
+                    </h3>
+                    <div class="code-card" id="code-download">    
+                        <a href="https://github.com/cmdscm/cmdscm.github.io/blob/main/file/%E6%8C%87%E5%AE%9A%E8%A7%86%E9%A2%91%E9%93%BE%E6%8E%A5.py">
+                            爬取B站视频
+                        </a>
+                        <a href="https://github.com/cmdscm/cmdscm.github.io/blob/main/file/%E5%8D%95%E8%AF%8D%E7%BF%BB%E8%AF%91%E5%99%A8.py">
+                            单词翻译器
+                        </a>
+                        <a href="https://github.com/cmdscm/cmdscm.github.io/blob/main/file/%E4%BA%94%E5%AD%90%E6%A3%8B1.0.py">
+                            五子棋1.0
+                        </a>
+                        <a href="https://github.com/cmdscm/cmdscm.github.io/blob/main/file/%E6%89%AB%E9%9B%B71.0.py">
+                            扫雷1.0
+                        </a>
+                        <a href="https://github.com/cmdscm/cmdscm.github.io/blob/main/file/%E6%89%AB%E9%9B%B72.0.py">
+                           扫雷2.0
+                        </a>
+                        <a href="https://github.com/cmdscm/cmdscm.github.io/blob/main/file/%E8%AE%A1%E7%AE%97%E5%99%A8.py">
+                            计算器
+                        </a>
+                    </div>
+                    <h3 class='code-title'>
+                        SCRATCH作品
+                    </h3>
+                    <div class="code-card" id="code-link">    
+                        <a href="https://www.ccw.site/detail/64f01ebea30a196dc00aaf7b?inviteCode=ob4vLZxb2aDipgnO" target="_blank">
+                            Lighting OS
+                        </a>
+                        <a href="https://www.ccw.site/detail/64f066e0d9ff8f7262bdeab3?inviteCode=eD32JYG08Mr10IWR" target="_blank">
+                            生日风波
+                        </a>
+                        <a href="https://www.ccw.site/detail/6693b5b922e0431e6fe73cc0?inviteCode=J3EBb120oYHF0cpP" target="_blank">
+                            消防知识答题
+                        </a>
+                        <a href="https://www.ccw.site/detail/654eebafd0a1dc162d56d633" target="_blank">
+                            卡牌对战
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section id="id" class="card">
+                <div class="section">
+                    <h2 class="card-title">
+                        我的账号
+                    </h2>
+                    <div class="id-card">
+                    </div>
+                </div>
+            </section>
+            <section id="update" class="card">
+                <div class="section">
+                    <h2 class="card-title">
+                        更新记录
+                    </h2>
+                    <div class="update-card">
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div id="footer-link">
+                <a href="https://code.visualstudio.com/Download" target="_blank">
+                    <p>下载Vscode</p>
+                </a>
+                <a href="https://getmc.zip" target="_blank">
+                    <p>下载我的世界1.20模组</p>
+                </a>
+                <a href="https://ltcat.lanzoum.com/ioxfy164k5if" target="_blank">
+                    <p>下载PCL</p>
+                </a>
             </div>
-            <div class="rizhi-card" id="rizhi-first">
-                <h1>2.0</h1>
-                <p>完成于23/04/29</p>
-            </div>
-            <div class="rizhi-card" id="rizhi-second">
-                <h1>3.0</h1>
-                <p>完成于23/05/17</p>
-            </div>
-            <div class="rizhi-card" id="rizhi-third">
-                <h1>4.0</h1>
-                <p>完成于23/09/05</p>
-            </div>
-            <div class="rizhi-card" id="rizhi-fourth">
-                <h1>5.0</h1>
-                <p>完成于23/12/04</p>
-            </div>
-        </section>
-    </div>
-    <footer>
-        <div id="footbtn">
-            <a href="https://code.visualstudio.com/Download" target="_blank">
-                <p>下载Vscode</p>
-            </a>
-            <a href="https://getmc.zip" target="_blank">
-                <p>下载我的世界1.20模组</p>
-            </a>
-            <a href="https://ltcat.lanzoum.com/ioxfy164k5if" target="_blank">
-                <p>下载PCL</p>
-            </a>
-        </div>
-        <p id="banben">5.0/正式</p>
-    </footer>
-</body>
+        </footer>
+        <script src="./main.js"></script>
+    </body>
 </html>
